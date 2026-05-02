@@ -3,84 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | A D Z I</title>
+  <title>Adzi Purnomo | IT Staff Programmer</title>
+  <meta id="metaDescription" name="description" content="CV online Adzi Purnomo, IT Staff Programmer yang menangani sistem POS, PostgreSQL, dan Mitrasoft HRD dengan pendekatan kerja yang rapi, adaptif, dan profesional.">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #05070f;
-      --bg-2: #0b1324;
-      --card: rgba(9, 15, 28, 0.82);
-      --card-border: rgba(56, 189, 248, 0.2);
-      --cyan: #38bdf8;
-      --lime: #a3e635;
-      --amber: #facc15;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --glow-1: rgba(56, 189, 248, 0.12);
-      --glow-2: rgba(250, 204, 21, 0.12);
-      --shadow: 0 20px 50px rgba(2, 6, 23, 0.55);
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --bg-soft: #edf2f8;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: #ffffff;
+      --surface-dark: #13233d;
+      --text: #152238;
+      --text-soft: #4a5d78;
+      --heading: #091321;
+      --border: rgba(15, 23, 42, 0.08);
+      --border-strong: rgba(37, 99, 235, 0.18);
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.1);
+      --accent-dark: #173e87;
+      --success: #15803d;
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --nav-height: 80px;
+      --section-gap: 100px;
     }
 
-    body[data-theme="light"] {
-      --bg: #f8fafc;
-      --bg-2: #e2e8f0;
-      --card: rgba(255, 255, 255, 0.82);
-      --card-border: rgba(56, 189, 248, 0.35);
-      --cyan: #0ea5e9;
-      --lime: #65a30d;
-      --amber: #f59e0b;
-      --text: #0f172a;
-      --muted: #475569;
-      --glow-1: rgba(14, 165, 233, 0.12);
-      --glow-2: rgba(245, 158, 11, 0.12);
-      --shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+    body[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #09111f;
+      --bg-soft: #101a2d;
+      --surface: rgba(15, 23, 42, 0.82);
+      --surface-strong: #16233b;
+      --surface-dark: #08101d;
+      --text: #dfe8f7;
+      --text-soft: #96a7c2;
+      --heading: #f8fbff;
+      --border: rgba(148, 163, 184, 0.14);
+      --border-strong: rgba(96, 165, 250, 0.22);
+      --accent: #60a5fa;
+      --accent-soft: rgba(96, 165, 250, 0.12);
+      --accent-dark: #c7dcff;
+      --success: #4ade80;
+      --shadow: 0 24px 70px rgba(2, 6, 23, 0.28);
     }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 10% 10%, var(--glow-1), transparent 60%),
-                  radial-gradient(900px 500px at 90% 20%, var(--glow-2), transparent 60%),
-                  linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 45%, var(--bg) 100%);
-      min-height: 100vh;
+    html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 26%),
+        radial-gradient(circle at 90% 0%, rgba(14, 165, 233, 0.06), transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      line-height: 1.65;
+      transition: background 0.25s ease, color 0.25s ease;
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px);
-      background-size: 120px 120px;
-      opacity: 0.3;
       pointer-events: none;
+      background-image: linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 78%);
       z-index: -1;
-    }
-
-    body[data-theme="light"]::before {
-      background-image: radial-gradient(rgba(14, 165, 233, 0.15) 1px, transparent 1px);
-      opacity: 0.22;
-    }
-
-    body[data-theme="light"] header {
-      background: rgba(248, 250, 252, 0.88);
-      border-bottom-color: rgba(14, 165, 233, 0.2);
-    }
-
-    body[data-theme="light"] header a {
-      color: #1f2937;
     }
 
     a {
@@ -89,1652 +92,1944 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
     }
 
     .container {
-      width: min(1200px, 92vw);
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
 
-    header {
-      position: fixed;
+    .section {
+      padding: var(--section-gap) 0;
+      scroll-margin-top: calc(var(--nav-height) + 24px);
+    }
+
+    .site-header {
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      padding: 14px 20px;
-      background: rgba(5, 10, 20, 0.7);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
       z-index: 1000;
-      transition: top 0.4s ease;
+      background: rgba(244, 247, 251, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
 
-    header a {
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.4px;
-      transition: color 0.3s ease;
+    body[data-theme="dark"] .site-header {
+      background: rgba(9, 17, 31, 0.82);
     }
 
-    header a:hover {
-      color: var(--cyan);
-    }
-
-    .lang-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .lang-toggle:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 22px rgba(56, 189, 248, 0.2);
-    }
-
-    .theme-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 22px rgba(56, 189, 248, 0.2);
-    }
-
-    body[data-theme="light"] .lang-toggle,
-    body[data-theme="light"] .theme-toggle {
-      background: rgba(255, 255, 255, 0.8);
-      border-color: rgba(14, 165, 233, 0.35);
-    }
-
-    section {
-      padding: 110px 0 80px;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .section-head h2 {
-      font-family: "Orbitron", sans-serif;
-      font-size: 28px;
-      color: var(--cyan);
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .span-12 { grid-column: span 12; }
-    .span-9 { grid-column: span 9; }
-    .span-8 { grid-column: span 8; }
-    .span-7 { grid-column: span 7; }
-    .span-6 { grid-column: span 6; }
-    .span-5 { grid-column: span 5; }
-    .span-4 { grid-column: span 4; }
-    .span-3 { grid-column: span 3; }
-
-    .bento-card {
-      position: relative;
-      padding: 22px;
-      border-radius: 22px;
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    }
-
-    .bento-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(250, 204, 21, 0.15));
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      pointer-events: none;
-    }
-
-    .bento-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(56, 189, 248, 0.5);
-      box-shadow: 0 30px 70px rgba(3, 7, 18, 0.6);
-    }
-
-    .bento-card:hover::before {
-      opacity: 1;
-    }
-
-    .hero-title {
-      font-family: "Orbitron", sans-serif;
-      font-size: clamp(32px, 4vw, 52px);
-      margin-bottom: 12px;
-      letter-spacing: 1.5px;
-      color: #e0f2fe;
-    }
-
-    .logo-scan {
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      background: rgba(7, 12, 22, 0.7);
-      box-shadow: 0 18px 32px rgba(2, 6, 23, 0.45);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 16px;
-      animation: logoFloat 8s ease-in-out infinite;
-    }
-
-    .logo-scan img {
-      width: 70%;
-      height: 70%;
-      object-fit: contain;
-      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
-      z-index: 2;
-    }
-
-    .logo-scan::before,
-    .logo-scan::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .logo-scan::before {
-      background: linear-gradient(transparent 35%, rgba(56, 189, 248, 0.25) 50%, transparent 65%);
-      transform: translateY(-120%);
-      animation: scanHorizontal 7.5s ease-in-out infinite;
-    }
-
-    .logo-scan::after {
-      background: linear-gradient(90deg, transparent 35%, rgba(250, 204, 21, 0.22) 50%, transparent 65%);
-      transform: translateX(-120%);
-      animation: scanVertical 8s ease-in-out infinite;
-      animation-delay: 3.2s;
-    }
-
-    .logo-scan .scan-grid {
-      position: absolute;
-      inset: -20%;
-      background-image:
-        repeating-linear-gradient(0deg, rgba(56, 189, 248, 0.08), rgba(56, 189, 248, 0.08) 1px, transparent 1px, transparent 8px),
-        repeating-linear-gradient(90deg, rgba(56, 189, 248, 0.06), rgba(56, 189, 248, 0.06) 1px, transparent 1px, transparent 10px);
-      opacity: 0.35;
-      mix-blend-mode: screen;
-      animation: gridShift 12s linear infinite;
-    }
-
-    .logo-scan .scan-glow {
-      position: absolute;
-      inset: -40%;
-      background: conic-gradient(from 120deg, rgba(56, 189, 248, 0.14), transparent 45%, rgba(250, 204, 21, 0.14), transparent 75%);
-      opacity: 0.5;
-      animation: glowSpin 14s linear infinite;
-    }
-
-    .logo-scan .scan-flicker {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 60%);
-      opacity: 0.2;
-      animation: flicker 4.8s steps(4) infinite;
-    }
-
-    @keyframes scanHorizontal {
-      0% { transform: translateY(-120%); opacity: 0; }
-      25% { opacity: 0.6; }
-      55% { transform: translateY(120%); opacity: 0.5; }
-      100% { transform: translateY(120%); opacity: 0; }
-    }
-
-    @keyframes scanVertical {
-      0% { transform: translateX(-120%); opacity: 0; }
-      25% { opacity: 0.55; }
-      55% { transform: translateX(120%); opacity: 0.45; }
-      100% { transform: translateX(120%); opacity: 0; }
-    }
-
-    @keyframes gridShift {
-      0% { transform: translate(0, 0); }
-      50% { transform: translate(-6px, 4px); }
-      100% { transform: translate(0, 0); }
-    }
-
-    @keyframes glowSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 0.18; }
-      40% { opacity: 0.28; }
-      60% { opacity: 0.12; }
-    }
-
-    @keyframes logoFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-
-    body[data-theme="light"] .logo-scan {
-      background: rgba(248, 250, 252, 0.9);
-      border-color: rgba(14, 165, 233, 0.4);
-      box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
-    }
-
-    body[data-theme="light"] .logo-scan img {
-      filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.35));
-    }
-
-    .hero-subtitle {
-      color: var(--muted);
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow {
-      color: var(--lime);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
-
-    .btn,
-    .ghost-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 22px;
-      border-radius: 14px;
-      font-weight: 600;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn {
-      background: linear-gradient(120deg, var(--cyan), var(--amber));
-      color: #04111f;
-      box-shadow: 0 14px 28px rgba(56, 189, 248, 0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px) scale(1.02);
-    }
-
-    .ghost-btn {
-      border-color: rgba(148, 163, 184, 0.4);
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.4);
-    }
-
-    .ghost-btn:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 14px 28px rgba(56, 189, 248, 0.18);
-    }
-
-    .chip-row {
+    .nav-shell {
+      min-height: var(--nav-height);
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .chip {
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      font-size: 12px;
-      color: #bae6fd;
-    }
-
-    .profile-card {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
       align-items: center;
-      text-align: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 24px;
-      object-fit: cover;
-      border: 2px solid rgba(56, 189, 248, 0.5);
-      box-shadow: 0 20px 35px rgba(15, 23, 42, 0.6);
-    }
-
-    .mini-grid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .mini-card {
-      background: rgba(15, 23, 42, 0.6);
-      border-radius: 16px;
-      padding: 12px;
-      font-size: 13px;
-      color: var(--muted);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-    }
-
-    .stat-number {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--amber);
-      margin-bottom: 6px;
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .about-list {
-      display: grid;
+    .brand {
+      display: inline-flex;
+      align-items: center;
       gap: 14px;
-      margin-top: 16px;
+      min-width: 0;
     }
 
-    .about-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: var(--muted);
-    }
-
-    .about-item i {
-      color: var(--cyan);
-      margin-top: 4px;
-    }
-
-    .impact-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .impact-list li {
-      list-style: none;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .impact-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-    }
-
-    .projects-grid .project-card h3 {
-      color: #e0f2fe;
-      margin-bottom: 12px;
-      font-size: 20px;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0;
-    }
-
-    .project-tags span {
-      background: rgba(163, 230, 53, 0.15);
-      border: 1px solid rgba(163, 230, 53, 0.25);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: #d9f99d;
-    }
-
-    .gallery-preview {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin: 16px 0;
-    }
-
-    .gallery-thumb {
-      border-radius: 16px;
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      background: rgba(2, 6, 23, 0.35);
-      aspect-ratio: 16 / 9;
+      background: var(--surface-strong);
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
     }
 
-    .gallery-thumb img {
+    .brand-mark img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.35s ease;
     }
 
-    .gallery-thumb:hover img {
-      transform: scale(1.05);
+    .brand-copy strong {
+      display: block;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
     }
 
-    .skills-grid {
+    .brand-copy span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-link {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--text-soft);
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--heading);
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      border-color: var(--border-strong);
+    }
+
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .lang-toggle {
+      min-width: 58px;
+      height: 46px;
+      padding: 0 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--heading);
+      cursor: pointer;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      transform: translateY(-1px);
+      border-color: var(--border-strong);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.7;
+    }
+
+    .section-head {
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
       gap: 14px;
+      margin-bottom: 34px;
     }
 
-    .skill-card {
+    .section-head h2 {
+      margin: 0;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 700px;
+      color: var(--text-soft);
+      font-size: 1.02rem;
+    }
+
+    .hero {
+      padding: 68px 0 88px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 12ch;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(3rem, 7vw, 4.9rem);
+      line-height: 0.96;
+      letter-spacing: -0.08em;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-lead {
+      margin: 24px 0 0;
+      max-width: 640px;
+      color: var(--text-soft);
+      font-size: clamp(1rem, 1.6vw, 1.16rem);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-point {
+      padding: 16px 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.48);
+    }
+
+    body[data-theme="dark"] .hero-point {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .hero-point strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .hero-point span {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent), #0ea5e9);
+      color: #ffffff;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.2);
+    }
+
+    .button-secondary {
+      background: transparent;
+      border-color: var(--border-strong);
+      color: var(--heading);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .intro-card,
+    .metric-grid,
+    .current-role,
+    .case-grid,
+    .skills-grid,
+    .services-grid,
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .intro-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .intro-person {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .intro-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--surface-strong);
+      border: 1px solid var(--border-strong);
+      flex: 0 0 auto;
+    }
+
+    .intro-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro-copy strong {
+      display: block;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.06rem;
+    }
+
+    .intro-copy span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(21, 128, 61, 0.1);
+      color: var(--success);
+      font-size: 0.84rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .intro-list,
+    .detail-list,
+    .service-list,
+    .skill-list,
+    .case-list,
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .intro-list li,
+    .detail-list li,
+    .service-list li,
+    .skill-list li,
+    .case-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--text-soft);
+    }
+
+    .intro-list li::before,
+    .detail-list li::before,
+    .service-list li::before,
+    .skill-list li::before,
+    .case-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.74em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      transform: translateY(-50%);
+    }
+
+    .metric-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .metric {
       text-align: center;
     }
 
-    .skill-card i {
-      font-size: 26px;
-      color: var(--cyan);
+    .metric strong {
+      display: block;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .about-grid,
+    .results-grid,
+    .project-grid,
+    .services-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card h3,
+    .project-card h3,
+    .service-card h3 {
+      margin: 0 0 12px;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p,
+    .project-card p,
+    .service-card p,
+    .result-card p,
+    .contact-line span,
+    .field-note {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .highlight {
+      color: var(--heading);
+      font-weight: 700;
+    }
+
+    .results-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .result-card strong {
+      display: block;
+      color: var(--heading);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
       margin-bottom: 10px;
     }
 
-    .education-grid .bento-card h3 {
-      color: #e0f2fe;
+    .result-card span {
+      display: block;
+      color: var(--heading);
+      font-weight: 700;
       margin-bottom: 8px;
     }
 
-    .edu-year {
-      display: inline-block;
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 13px;
+    .project-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    footer {
-      padding: 40px 0 60px;
-      text-align: center;
-      border-top: 1px solid rgba(56, 189, 248, 0.1);
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      height: 100%;
+    }
+
+    .project-visual {
+      min-height: 172px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(14, 165, 233, 0.06)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(237, 242, 248, 0.5));
+      padding: 18px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    body[data-theme="dark"] .project-visual {
+      background:
+        linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(14, 165, 233, 0.06)),
+        linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.4));
+    }
+
+    .project-frame {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      background: var(--surface-dark);
+      padding: 14px;
+    }
+
+    .project-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .project-bar span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .project-lines {
+      display: grid;
+      gap: 8px;
+    }
+
+    .project-lines span {
+      display: block;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.18);
+    }
+
+    .project-lines span:nth-child(1) { width: 74%; }
+    .project-lines span:nth-child(2) { width: 100%; }
+    .project-lines span:nth-child(3) { width: 66%; }
+
+    .stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .stack-list li {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      color: var(--accent-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .service-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      width: fit-content;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      flex: 0 0 auto;
+    }
+
+    .contact-line strong {
+      display: block;
+      color: var(--heading);
+      margin-bottom: 3px;
+    }
+
+    .contact-actions,
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
     .contact-form {
       display: grid;
-      gap: 12px;
-      max-width: 520px;
-      margin: 18px auto 0;
-      text-align: left;
+      gap: 14px;
     }
 
-    .contact-card {
-      max-width: 720px;
-      margin: 0 auto 24px;
-      text-align: left;
-      position: relative;
-    }
-
-    .contact-card::after {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: 24px;
-      background: linear-gradient(120deg, rgba(56, 189, 248, 0.35), rgba(250, 204, 21, 0.15));
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      z-index: -1;
-    }
-
-    .contact-card:hover::after {
-      opacity: 1;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-
-    .contact-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: #bae6fd;
-      margin-top: 14px;
-      transition: transform 0.3s ease;
-    }
-
-    .contact-card:hover .contact-cta {
-      transform: translateX(4px);
-    }
-
-    .contact-field {
+    .field {
       display: grid;
-      gap: 6px;
-      font-size: 13px;
-      color: var(--muted);
+      gap: 8px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    .field label {
+      color: var(--heading);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea {
       width: 100%;
-      padding: 12px 14px;
+      padding: 14px 16px;
       border-radius: 14px;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      background: rgba(8, 14, 26, 0.8);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.68);
       color: var(--text);
-      font-family: "Space Grotesk", sans-serif;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
       outline: none;
-      border-color: rgba(56, 189, 248, 0.7);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
-    .contact-form input:hover,
-    .contact-form textarea:hover {
-      border-color: rgba(56, 189, 248, 0.5);
+    body[data-theme="dark"] .field input,
+    body[data-theme="dark"] .field textarea {
+      background: rgba(255, 255, 255, 0.03);
     }
 
-    .contact-form textarea {
-      min-height: 120px;
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .field textarea {
+      min-height: 140px;
       resize: vertical;
     }
 
-    .contact-form .btn {
-      justify-content: center;
-      width: 100%;
+    .field-note {
+      font-size: 0.88rem;
     }
 
-    .socials {
+    .footer {
+      padding: 24px 0 50px;
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .footer-shell {
       display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .socials a {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      color: var(--cyan);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    body[data-theme="light"] .hero-title,
-    body[data-theme="light"] .projects-grid .project-card h3,
-    body[data-theme="light"] .education-grid .bento-card h3 {
-      color: #0f172a;
-    }
-
-    body[data-theme="light"] .hero-subtitle,
-    body[data-theme="light"] .section-head p,
-    body[data-theme="light"] .about-item,
-    body[data-theme="light"] .impact-list,
-    body[data-theme="light"] .stat-label,
-    body[data-theme="light"] .contact-card p {
-      color: #334155;
-    }
-
-    body[data-theme="light"] .chip {
-      background: rgba(14, 165, 233, 0.12);
-      border-color: rgba(14, 165, 233, 0.3);
-      color: #1e3a8a;
-    }
-
-    body[data-theme="light"] .mini-card {
-      background: rgba(226, 232, 240, 0.9);
-      color: #1f2937;
-      border-color: rgba(14, 165, 233, 0.25);
-    }
-
-    body[data-theme="light"] .stat-number {
-      color: #f59e0b;
-    }
-
-    body[data-theme="light"] .project-tags span {
-      background: rgba(101, 163, 13, 0.16);
-      border-color: rgba(101, 163, 13, 0.35);
-      color: #365314;
-    }
-
-    body[data-theme="light"] .gallery-thumb {
-      border-color: rgba(14, 165, 233, 0.3);
-      background: rgba(248, 250, 252, 0.9);
-    }
-
-    body[data-theme="light"] .contact-cta {
-      color: #1e40af;
-    }
-
-    body[data-theme="light"] .ghost-btn {
-      background: rgba(226, 232, 240, 0.9);
-      color: #0f172a;
-      border-color: rgba(14, 165, 233, 0.35);
-    }
-
-    body[data-theme="light"] .socials a {
-      background: rgba(248, 250, 252, 0.9);
-      border-color: rgba(14, 165, 233, 0.3);
-      color: #0ea5e9;
-    }
-
-    body[data-theme="light"] .contact-form input,
-    body[data-theme="light"] .contact-form textarea {
-      background: rgba(248, 250, 252, 0.95);
-      color: #0f172a;
-      border-color: rgba(14, 165, 233, 0.3);
-    }
-
-    .socials a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(56, 189, 248, 0.25);
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(2, 6, 23, 0.85);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    .modal-content {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 20px;
-      padding: 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      max-width: 900px;
-      width: 100%;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-    }
-
-    .modal-content img {
-      border-radius: 14px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .modal-content img:hover {
-      transform: scale(1.05);
-    }
-
-    .close {
-      position: absolute;
-      top: 18px;
-      right: 24px;
-      font-size: 32px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    .gallery-modal {
-      align-items: stretch;
-    }
-
-    .gallery-content {
-      max-width: 1100px;
-      max-height: 82vh;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      overflow: hidden;
-    }
-
-    .gallery-toolbar {
-      display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(9, 15, 28, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      backdrop-filter: blur(10px);
-    }
-
-    .gallery-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .gallery-filter {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      background: rgba(56, 189, 248, 0.12);
-      color: #bae6fd;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery-filter.active {
-      background: linear-gradient(120deg, var(--cyan), var(--amber));
-      color: #04111f;
-      box-shadow: 0 12px 24px rgba(56, 189, 248, 0.25);
-    }
-
-    .gallery-filter:hover {
-      transform: translateY(-1px);
-    }
-
-    .gallery-count {
-      font-size: 12px;
-      color: var(--muted);
-      display: inline-flex;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
-      overflow: auto;
-      padding-right: 6px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
 
-    .gallery-grid::-webkit-scrollbar {
-      width: 8px;
+    .footer-shell p {
+      margin: 0;
     }
 
-    .gallery-grid::-webkit-scrollbar-thumb {
-      background: rgba(56, 189, 248, 0.35);
-      border-radius: 999px;
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
 
-    body[data-theme="light"] .gallery-toolbar {
-      background: rgba(248, 250, 252, 0.95);
-      border-color: rgba(14, 165, 233, 0.3);
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    body[data-theme="light"] .gallery-filter {
-      background: rgba(14, 165, 233, 0.12);
-      border-color: rgba(14, 165, 233, 0.3);
-      color: #1e3a8a;
-    }
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-grid,
+      .project-grid,
+      .services-grid,
+      .contact-grid,
+      .results-grid,
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
 
-    body[data-theme="light"] .gallery-count {
-      color: #334155;
-    }
-
-    .zoom-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(2, 6, 23, 0.92);
-      z-index: 3000;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .zoom-content img,
-    .zoom-content iframe {
-      max-width: 92vw;
-      max-height: 82vh;
-      border-radius: 18px;
-      box-shadow: 0 20px 50px rgba(2, 6, 23, 0.6);
-    }
-
-    @media (max-width: 900px) {
-      header {
+      .nav-shell {
         flex-wrap: wrap;
-        gap: 14px;
+        justify-content: center;
+        padding: 14px 0;
       }
 
-      section {
-        padding: 90px 0 70px;
-      }
-
-      .bento-grid,
-      .skills-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-      }
-
-      .span-9, .span-8, .span-7, .span-6, .span-5 {
-        grid-column: span 6;
+      .brand,
+      .nav-actions {
+        width: 100%;
+        justify-content: center;
       }
     }
 
-    @media (max-width: 640px) {
-      header {
-        position: sticky;
+    @media (max-width: 720px) {
+      :root {
+        --nav-height: 138px;
+        --section-gap: 82px;
       }
 
-      .bento-grid,
-      .skills-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+      .container {
+        width: min(100% - 24px, 1120px);
       }
 
-      .span-12, .span-9, .span-8, .span-7, .span-6, .span-5, .span-4, .span-3 {
-        grid-column: span 1;
+      .hero {
+        padding-top: 44px;
       }
 
-      .hero-subtitle {
-        font-size: 16px;
+      .hero-grid,
+      .hero-points,
+      .metric-grid,
+      .about-grid,
+      .results-grid,
+      .project-grid,
+      .skills-grid,
+      .services-grid,
+      .contact-grid,
+      .field-grid,
+      .contact-actions,
+      .footer-shell {
+        grid-template-columns: 1fr;
       }
 
-      .profile-pic {
-        width: 120px;
-        height: 120px;
+      .card,
+      .hero-main {
+        padding: 22px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .intro-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-link {
+        padding: 8px 10px;
+        font-size: 0.88rem;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
         animation: none !important;
         transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="#hero" data-i18n="nav_home">Home</a>
-    <a href="#about" data-i18n="nav_about">About</a>
-    <a href="#experience" data-i18n="nav_experience">Experience</a>
-    <a href="#projects" data-i18n="nav_projects">Projects</a>
-    <a href="#skills" data-i18n="nav_skills">Skills</a>
-    <a href="#education" data-i18n="nav_education">Education</a>
-    <a href="#contact" data-i18n="nav_contact">Contact</a>
-    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">EN</button>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">LIGHT</button>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="Kembali ke beranda">
+        <span class="brand-mark">
+          <img src="logo.png" alt="Logo Adzi Purnomo">
+        </span>
+        <span class="brand-copy">
+          <strong>Adzi Purnomo</strong>
+          <span id="brandRole">IT Staff Programmer</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link active" href="#home" id="navHome">Home</a>
+        <a class="nav-link" href="#about" id="navAbout">About</a>
+        <a class="nav-link" href="#experience" id="navExperience">Experience</a>
+        <a class="nav-link" href="#results" id="navStrengths">Strengths</a>
+        <a class="nav-link" href="#projects" id="navHighlights">Highlights</a>
+        <a class="nav-link" href="#skills" id="navSkills">Skills</a>
+        <a class="nav-link" href="#contact" id="navContact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ubah tema">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77M15.5 12A3.5 3.5 0 1 1 8.5 12A3.5 3.5 0 0 1 15.5 12Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <section id="hero">
-    <div class="container">
-      <div class="bento-grid hero-grid">
-        <div class="bento-card span-7" data-aos="fade-right">
-          <div class="logo-scan">
-            <span class="scan-glow"></span>
-            <span class="scan-grid"></span>
-            <span class="scan-flicker"></span>
-            <img src="logo.png" alt="Logo">
-          </div>
-          <div class="eyebrow" data-i18n="hero_eyebrow">Future CV</div>
-          <h1 class="hero-title">Adzi Purnomo</h1>
-          <p class="hero-subtitle" data-i18n="hero_subtitle">Technician | Web Developer | IT Staff</p>
-          <div class="chip-row">
-            <span class="chip" data-i18n="hero_chip_1">IoT Builder</span>
-            <span class="chip" data-i18n="hero_chip_2">Web Systems</span>
-            <span class="chip" data-i18n="hero_chip_3">Hardware + Software</span>
-          </div>
-          <div class="chip-row" style="margin-top: 22px;">
-            <a href="#projects" class="btn" data-i18n="hero_cta_primary">Explore My Work</a>
-            <a href="#contact" class="ghost-btn" data-i18n="hero_cta_secondary">Contact Me</a>
-          </div>
-        </div>
-        <div class="bento-card profile-card span-5" data-aos="fade-left">
-          <img src="https://cdn.pixabay.com/photo/2025/09/16/02/45/profile-9836912_1280.png" alt="Foto Profil" class="profile-pic">
-          <p data-i18n="hero_profile_desc">Berbasis di Indonesia. Terbiasa menangani produk elektronik, sistem IoT, dan aplikasi berbasis web.</p>
-          <div class="mini-grid">
-            <div class="mini-card">
-              <strong data-i18n="hero_focus_label">Focus</strong><br><span data-i18n="hero_focus_value">IoT, Web Apps, Automation</span>
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="panel hero-main reveal">
+          <span class="eyebrow" id="heroEyebrow">Curriculum Vitae</span>
+          <h1 id="heroTitle">Teknis, <span>adaptif</span>, dan terbiasa bekerja rapi.</h1>
+          <p class="hero-lead" id="heroLead">
+            Saya adalah <span class="highlight">IT Staff Programmer</span> di PT Surya Pratama Keramindo. Saat ini saya menangani perbaikan bug, pengelolaan data pada sistem POS berbasis PostgreSQL, serta monitoring dan penyesuaian kebutuhan pada Mitrasoft HRD. Saya menyukai pekerjaan yang menuntut ketelitian, logika yang jelas, dan hasil akhir yang tetap enak digunakan.
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <strong id="heroPoint1Title">Terbiasa menangani sistem aktif</strong>
+              <span id="heroPoint1Text">Fokus pada bug fixing, kestabilan alur kerja, dan kebutuhan operasional yang benar-benar dipakai.</span>
             </div>
-            <div class="mini-card">
-              <strong data-i18n="hero_stack_label">Stack</strong><br><span data-i18n="hero_stack_value">JS, Python, PHP, MySQL</span>
+            <div class="hero-point">
+              <strong id="heroPoint2Title">Punya sisi teknis dan visual</strong>
+              <span id="heroPoint2Text">Nyaman bekerja di area sistem, tetapi tetap peduli pada kerapian tampilan dan kenyamanan pengguna.</span>
             </div>
           </div>
-        </div>
-        <div class="bento-card span-4" data-aos="fade-up">
-          <div class="stat-number count-up" data-target="8" data-suffix="+">0</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="bento-card span-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number count-up" data-target="11">0</div>
-          <div class="stat-label">Technologies Mastered</div>
-        </div>
-        <div class="bento-card span-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number count-up" data-target="100" data-suffix="%">0</div>
-          <div class="stat-label">Project Success</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="about_title">About Me</h2>
-        <p data-i18n="about_subtitle">Profil singkat dengan fokus pada kemampuan teknis, analisis, dan solusi digital modern.</p>
-      </div>
-      <div class="bento-grid">
-        <div class="bento-card span-7" data-aos="fade-up">
-          <p data-i18n="about_body">
-            Lulusan S1 Teknik Informatika dengan IPK 3.78, memiliki latar belakang sebagai teknisi
-            elektronik konsumen di PT SITCOMTARA sejak 2017. Terbiasa melakukan troubleshooting
-            perangkat, analisis teknis, dan edukasi pelanggan secara profesional. Berpengalaman
-            mengembangkan solusi berbasis teknologi seperti IoT dan pemrograman sistem berbasis web.
-          </p>
+          <div class="cta-row">
+            <a class="button button-primary" href="#experience" id="heroCtaPrimary">Lihat Pengalaman</a>
+            <a class="button button-secondary" href="#contact" id="heroCtaSecondary">Lihat Kontak</a>
+          </div>
         </div>
-        <div class="bento-card span-5" data-aos="fade-up" data-aos-delay="150">
-          <div class="about-list">
-            <div class="about-item"><i class="fa-solid fa-microchip"></i><span data-i18n="about_item_1">Analisis perangkat dan otomasi sistem.</span></div>
-            <div class="about-item"><i class="fa-solid fa-code"></i><span data-i18n="about_item_2">Pengembangan web responsif dan interaktif.</span></div>
-            <div class="about-item"><i class="fa-solid fa-signal"></i><span data-i18n="about_item_3">Integrasi IoT untuk monitoring real time.</span></div>
-            <div class="about-item"><i class="fa-solid fa-users"></i><span data-i18n="about_item_4">Edukasi teknis dan komunikasi dengan klien.</span></div>
+
+        <div class="hero-side reveal">
+          <div class="card">
+            <div class="intro-top">
+              <div class="intro-person">
+                <div class="intro-avatar">
+                  <img src="logo.png" alt="Identitas Adzi Purnomo">
+                </div>
+                <div class="intro-copy">
+                  <strong>Adzi Purnomo</strong>
+                  <span id="introCopyText">Fokus pada sistem bisnis, support aplikasi, dan presentasi digital yang rapi.</span>
+                </div>
+              </div>
+              <span class="badge" id="introBadge">Currently Active</span>
+            </div>
+            <ul class="intro-list">
+              <li id="introList1">Menangani bug fixing, support aplikasi internal, dan pengelolaan data yang berhubungan dengan POS.</li>
+              <li id="introList2">Monitoring Mitrasoft HRD serta membantu penyesuaian fitur berdasarkan kebutuhan tim HRD.</li>
+              <li id="introList3">Memiliki minat pada pengembangan tampilan web yang bersih, modern, dan mudah dipahami.</li>
+            </ul>
+          </div>
+
+          <div class="metric-grid">
+            <div class="card metric">
+              <strong>7</strong>
+              <span id="metric1">Bulan sebagai IT Staff Programmer</span>
+            </div>
+            <div class="card metric">
+              <strong>2</strong>
+              <span id="metric2">Sistem utama yang ditangani</span>
+            </div>
+            <div class="card metric">
+              <strong>1</strong>
+              <span id="metric3">Fokus: rapi, profesional, dan realistis</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="experience">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="exp_title">Experience</h2>
-        <p data-i18n="exp_subtitle">Teknisi CE (Consumer Electronics) di PT SITCOMTARA (2017 - 2025)</p>
-      </div>
-      <div class="bento-grid">
-        <div class="bento-card span-6" data-aos="fade-up">
-          <h3 data-i18n="exp_role_title">Role Impact</h3>
-          <ul class="impact-list">
-            <li data-i18n="exp_role_1">Diagnosa dan perbaikan 500+ perangkat dengan keberhasilan 98% di kunjungan pertama.</li>
-            <li data-i18n="exp_role_2">Instalasi dan edukasi teknis untuk 200+ pelanggan.</li>
-            <li data-i18n="exp_role_3">Efisiensi diagnosa awal naik hingga 90% lewat analisis pola kerusakan.</li>
-          </ul>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" id="aboutEyebrow">About</span>
+          <h2 id="aboutTitle">Latar belakang teknis dengan cara kerja yang terstruktur dan mudah beradaptasi.</h2>
+          <p id="aboutLead">Saya lebih nyaman bekerja pada hal-hal yang konkret: memahami masalah, membaca pola, memperbaiki bagian yang bermasalah, lalu memastikan hasilnya tetap rapi dan mudah digunakan. Pendekatan itu saya pakai baik untuk sistem internal maupun tampilan web.</p>
         </div>
-        <div class="bento-card span-6" data-aos="fade-up" data-aos-delay="150">
-          <h3 data-i18n="exp_service_title">Service Excellence</h3>
-          <ul class="impact-list">
-            <li data-i18n="exp_service_1">Kolaborasi dengan tim service untuk menjaga standar layanan Samsung.</li>
-            <li data-i18n="exp_service_2">Dokumentasi kasus dan rekomendasi perawatan preventif.</li>
-            <li data-i18n="exp_service_3">Penguatan KPI layanan melalui troubleshooting berbasis data.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="projects">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="projects_title">Projects</h2>
-        <p data-i18n="projects_subtitle">Beberapa proyek unggulan dengan fokus pada pengalaman visual modern.</p>
-      </div>
-      <div class="bento-grid projects-grid">
-        <article class="bento-card project-card span-12" data-aos="fade-up">
-          <h3 data-i18n="project_suite_title">Apps Suite Gallery</h3>
-          <p data-i18n="project_suite_body">
-            Koleksi tampilan aplikasi yang pernah saya bangun untuk kebutuhan web, service center,
-            dan sistem arsip. Klik untuk melihat seluruh screenshot secara lengkap.
-          </p>
-          <div class="project-tags">
-            <span data-i18n="project_suite_tag_1">Web Apps</span>
-            <span data-i18n="project_suite_tag_2">Service System</span>
-            <span data-i18n="project_suite_tag_3">Archive Platform</span>
-          </div>
-          <div class="gallery-preview">
-            <div class="gallery-thumb"><img src="assets/projects/apps-adzi-web-1.png" alt="Apps Adzi Web 1"></div>
-            <div class="gallery-thumb"><img src="assets/projects/apps-elektron-1.png" alt="Apps Elektron 1"></div>
-            <div class="gallery-thumb"><img src="assets/projects/arsip-unh-1.png" alt="Arsip UNH 1"></div>
-          </div>
-          <button class="btn" onclick="openModal('modalAppsSuite')" data-i18n="project_btn_gallery">Lihat Gallery</button>
-        </article>
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3 id="aboutCard1Title">Profil Singkat</h3>
+            <p id="aboutCard1Body">
+              Saat ini saya bekerja sebagai <span class="highlight">IT Staff Programmer</span> di <span class="highlight">PT Surya Pratama Keramindo</span>. Pekerjaan saya berfokus pada stabilitas sistem, perbaikan bug, pengelolaan data pada POS berbasis PostgreSQL, serta monitoring dan penyesuaian fitur pada Mitrasoft HRD.
+            </p>
+            <ul class="detail-list" style="margin-top:18px;">
+              <li id="aboutCard1List1">Terbiasa bekerja dengan kebutuhan operasional yang harus jalan, bukan sekadar demo.</li>
+              <li id="aboutCard1List2">Paham bahwa sistem yang bagus harus mudah dipakai dan mudah dipelihara.</li>
+              <li id="aboutCard1List3">Menjaga keseimbangan antara fungsi teknis, kerapian struktur, dan pengalaman pengguna.</li>
+            </ul>
+          </article>
 
-        <article class="bento-card project-card span-7" data-aos="fade-up">
-          <h3>Website Portfolio</h3>
-          <p data-i18n="project_1_body">
-            Layanan pengembangan website dari desain hingga implementasi. Website responsif dan
-            interaktif menggunakan HTML, CSS, JavaScript, dan PHP.
-          </p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
-          </div>
-          <button class="btn" onclick="openModal('modalPortfolio1')" data-i18n="project_btn_view">Lihat Screenshot</button>
-        </article>
-
-        <article class="bento-card project-card span-5" data-aos="fade-up" data-aos-delay="120">
-          <h3>Graphic Design Project</h3>
-          <p data-i18n="project_2_body">
-            Desain logo, banner, dan visual media sosial dengan Adobe Photoshop, Figma, dan Canva.
-          </p>
-          <div class="project-tags">
-            <span>Figma</span><span>Photoshop</span><span>Canva</span>
-          </div>
-          <button class="btn" onclick="openModal('modalPortfolio2')" data-i18n="project_btn_view">Lihat Screenshot</button>
-        </article>
-
-        <article class="bento-card project-card span-5" data-aos="fade-up">
-          <h3>Mobile App Development</h3>
-          <p data-i18n="project_3_body">
-            Aplikasi mobile untuk manajemen tugas menggunakan Flutter dan Firebase sebagai backend.
-          </p>
-          <div class="project-tags">
-            <span>Flutter</span><span>Firebase</span><span>UX</span>
-          </div>
-          <button class="btn" onclick="openModal('modalPortfolio3')" data-i18n="project_btn_view">Lihat Screenshot</button>
-        </article>
-
-        <article class="bento-card project-card span-7" data-aos="fade-up" data-aos-delay="120">
-          <h3>Video Editing Portfolio</h3>
-          <p data-i18n="project_4_body">
-            Proyek video editing untuk media sosial dan presentasi dengan efek visual dan transisi modern.
-          </p>
-          <div class="project-tags">
-            <span>CapCut</span><span>KineMaster</span><span>Motion</span>
-          </div>
-          <button class="btn" onclick="zoomVideo('https://youtu.be/dVN2JlRGd7k?si=e18ld6nPfDKZY_xj')" data-i18n="project_btn_video">Lihat Video</button>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="skills_title">Skills</h2>
-        <p data-i18n="skills_subtitle">Teknologi yang dikuasai untuk membangun solusi digital end-to-end.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-php"></i><p>PHP</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-solid fa-database"></i><p>MySQL</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-laravel"></i><p>Laravel</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-react"></i><p>React</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
-        <div class="bento-card skill-card span-3" data-aos="zoom-in"><i class="fa-solid fa-code"></i><p>Golang</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="edu_title">Education</h2>
-        <p data-i18n="edu_subtitle">Perjalanan akademik dan fokus pembelajaran utama.</p>
-      </div>
-      <div class="bento-grid education-grid">
-        <div class="bento-card span-6" data-aos="fade-up">
-          <h3>Sarjana Teknik Informatika - Universitas Nurdin Hamzah Jambi</h3>
-          <span class="edu-year">2020 - 2024</span>
-          <p><strong data-i18n="edu_gpa_label">IPK:</strong> <span>3.78/4.00</span></p>
-          <ul class="impact-list">
-            <li data-i18n="edu_focus_1">Fokus: Pengembangan Perangkat Lunak, Analisis Data, IoT, Sistem Informasi.</li>
-            <li data-i18n="edu_focus_2">Skripsi: Prototype Sistem Smart Garden Berbasis IoT.</li>
-          </ul>
-        </div>
-        <div class="bento-card span-6" data-aos="fade-up" data-aos-delay="120">
-          <h3>SMK Negeri 1 Natar Lampung Selatan - Teknik Elektronika Industri</h3>
-          <span class="edu-year">2013 - 2016</span>
-          <p data-i18n="edu_focus_3">Konsentrasi pada elektronika industri dan sistem kendali.</p>
+          <article class="card reveal">
+            <h3 id="aboutCard2Title">Gaya Kerja</h3>
+            <p id="aboutCard2Body">
+              Saya menyukai hasil yang bersih dan jelas. Bagi saya, tampilan yang baik bukan yang ramai, tetapi yang mampu menyampaikan informasi dengan ringan, teratur, dan tetap terasa modern.
+            </p>
+            <ul class="detail-list" style="margin-top:18px;">
+              <li id="aboutCard2List1">Mengutamakan logika alur sebelum menambah elemen visual.</li>
+              <li id="aboutCard2List2">Lebih suka desain yang dewasa, simpel, dan tidak berlebihan.</li>
+              <li id="aboutCard2List3">Nyaman belajar hal baru selama masih relevan dan bisa diterapkan dengan baik.</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer id="contact">
-    <div class="container">
-      <div class="bento-card contact-card" data-aos="fade-up">
-        <p><strong data-i18n="contact_title">Terima kasih sudah berkunjung.</strong></p>
-        <p data-i18n="contact_body">Jika Anda ingin berdiskusi lebih lanjut atau memiliki pertanyaan terkait layanan saya, silakan kirim pesan menggunakan formulir berikut. Saya akan merespons secepat mungkin secara profesional.</p>
-        <span class="contact-cta"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact_cta">Formulir ini langsung mengarah ke email saya.</span></span>
-        <form class="contact-form" action="mailto:adzypurnomo@gmail.com" method="POST" enctype="text/plain">
-          <label class="contact-field">
-            <span data-i18n="contact_label_name">Nama</span>
-            <input type="text" name="name" placeholder="Nama kamu" required data-i18n-placeholder="contact_placeholder_name">
-          </label>
-          <label class="contact-field">
-            <span data-i18n="contact_label_email">Email</span>
-            <input type="email" name="email" placeholder="email@domain.com" required data-i18n-placeholder="contact_placeholder_email">
-          </label>
-          <label class="contact-field">
-            <span data-i18n="contact_label_subject">Subjek</span>
-            <input type="text" name="subject" placeholder="Judul pesan" required data-i18n-placeholder="contact_placeholder_subject">
-          </label>
-          <label class="contact-field">
-            <span data-i18n="contact_label_message">Pesan</span>
-            <textarea name="message" placeholder="Tulis pesan kamu di sini..." required data-i18n-placeholder="contact_placeholder_message"></textarea>
-          </label>
-          <button class="btn" type="submit" data-i18n="contact_btn">Kirim Email</button>
-        </form>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" id="experienceEyebrow">Experience</span>
+          <h2 id="experienceTitle">Pengalaman kerja yang membentuk ketelitian, kecepatan belajar, dan cara berpikir sistematis.</h2>
+          <p id="experienceLead">Lingkungan kerja saya saat ini menuntut respons yang cepat, pemahaman teknis yang jelas, dan kemampuan menyesuaikan sistem dengan kebutuhan pengguna yang terus berjalan.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3 id="experienceCard1Title">PT Surya Pratama Keramindo</h3>
+            <p><span class="highlight">IT Staff Programmer</span> · 7 Bulan</p>
+            <ul class="detail-list" style="margin-top:18px;">
+              <li>Fix bug pada sistem yang digunakan untuk kebutuhan operasional perusahaan.</li>
+              <li>Input dan delete nota karyawan berdasarkan kebutuhan database <span class="highlight">PostgreSQL</span> pada aplikasi POS.</li>
+              <li>Monitoring kendala yang terjadi pada <span class="highlight">Mitrasoft HRD</span> agar aktivitas HRD tidak terganggu.</li>
+              <li>Menambahkan fitur yang dibutuhkan HRD sesuai kebutuhan operasional yang berjalan.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>Ruang Lingkup Pekerjaan</h3>
+            <p>
+              Dalam pekerjaan sehari-hari, saya tidak hanya melihat dari sisi teknis, tetapi juga dari sisi penggunaan. Sistem yang baik harus stabil, mudah dipahami, dan bisa mendukung pekerjaan tim tanpa menambah kebingungan baru.
+            </p>
+            <ul class="detail-list" style="margin-top:18px;">
+              <li>Mengevaluasi masalah dari data, alur kerja, dan kebutuhan pengguna.</li>
+              <li>Menjaga agar perubahan fitur tetap relevan dengan proses kerja yang berjalan.</li>
+              <li>Terbiasa bekerja rapi pada hal-hal kecil yang berdampak pada operasional harian.</li>
+            </ul>
+          </article>
+        </div>
       </div>
-      <p data-i18n="footer_copy">@ 2025 Adzi Purnomo. All Rights Reserved.</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/adzipurnomo18/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Adzipurnomo18" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.youtube.com/@adzp18" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Strengths</span>
+          <h2>Kekuatan yang paling terasa dalam cara saya bekerja.</h2>
+          <p>Bagian ini merangkum kualitas kerja yang paling sering saya gunakan: berpikir runtut, cukup detail, tetap fleksibel, dan berusaha membuat hasil akhir terlihat bersih sekaligus fungsional.</p>
+        </div>
+
+        <div class="results-grid">
+          <article class="card result-card reveal">
+            <strong>Rapi</strong>
+            <span>Terbiasa menyusun dengan jelas</span>
+            <p>Baik dalam sistem maupun tampilan, saya lebih nyaman dengan struktur yang bersih dan mudah diikuti.</p>
+          </article>
+          <article class="card result-card reveal">
+            <strong>Adaptif</strong>
+            <span>Cepat menyesuaikan kebutuhan</span>
+            <p>Nyaman menangani perubahan, perbaikan, atau tambahan fitur selama arahnya jelas dan bisa dieksekusi.</p>
+          </article>
+          <article class="card result-card reveal">
+            <strong>Teknis</strong>
+            <span>Nyaman dengan sistem aktif</span>
+            <p>Terbiasa bekerja pada aplikasi yang langsung dipakai pengguna, jadi fokus saya bukan teori, tetapi fungsi nyata.</p>
+          </article>
+          <article class="card result-card reveal">
+            <strong>Kreatif</strong>
+            <span>Punya rasa pada tampilan</span>
+            <p>Saya menyukai tampilan yang modern dan sedikit berbeda, tetapi tetap dijaga agar profesional dan tidak berlebihan.</p>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Highlights</span>
+          <h2>Area yang paling mencerminkan minat dan arah pengembangan saya.</h2>
+          <p>Selain pekerjaan inti di sistem internal, saya juga tertarik pada cara teknologi dipresentasikan dengan lebih modern, lebih ringan, dan tetap enak dipahami.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="card project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-frame">
+                <div class="project-bar"><span></span><span></span><span></span></div>
+                <div class="project-lines"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div>
+              <h3>Web Profile yang Bersih dan Modern</h3>
+              <ul class="case-list">
+                <li><strong>Fokus:</strong> Tampilan web satu halaman yang rapi, ringan, dan nyaman dibaca.</li>
+                <li><strong>Pendekatan:</strong> Mengutamakan struktur informasi, tipografi, dan ritme visual yang tenang.</li>
+                <li><strong>Nilai:</strong> Cocok untuk profil profesional, personal website, atau CV online yang modern.</li>
+              </ul>
+            </div>
+            <ul class="stack-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Vanilla JS</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-frame">
+                <div class="project-bar"><span></span><span></span><span></span></div>
+                <div class="project-lines"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div>
+              <h3>Perpaduan Sistem dan Presentasi</h3>
+              <ul class="case-list">
+                <li><strong>Fokus:</strong> Menggabungkan cara berpikir teknis dengan perhatian pada tampilan dan pengalaman pengguna.</li>
+                <li><strong>Pendekatan:</strong> Menjaga agar halaman tetap ringan, jelas, dan tidak kehilangan karakter.</li>
+                <li><strong>Nilai:</strong> Memberi kesan bahwa teknologi tidak harus kaku untuk tetap terlihat profesional.</li>
+              </ul>
+            </div>
+            <ul class="stack-list">
+              <li>UI Layout</li>
+              <li>Responsive Design</li>
+              <li>Information Flow</li>
+              <li>Static Hosting</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-frame">
+                <div class="project-bar"><span></span><span></span><span></span></div>
+                <div class="project-lines"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div>
+              <h3>Ketertarikan pada Detail yang Fungsional</h3>
+              <ul class="case-list">
+                <li><strong>Fokus:</strong> Hal-hal kecil seperti alur, penempatan informasi, dan konsistensi visual.</li>
+                <li><strong>Pendekatan:</strong> Mengurangi elemen yang tidak perlu dan memperkuat bagian yang benar-benar penting.</li>
+                <li><strong>Nilai:</strong> Membuat hasil akhir terasa lebih matang, lebih tenang, dan tetap punya identitas.</li>
+              </ul>
+            </div>
+            <ul class="stack-list">
+              <li>Visual Consistency</li>
+              <li>Content Structure</li>
+              <li>Fast Loading</li>
+              <li>Minimal Interaction</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Skills</span>
+          <h2>Keahlian yang paling relevan dengan pekerjaan saya saat ini.</h2>
+          <p>Saya lebih memilih menampilkan skill yang benar-benar saya pakai dan punya hubungan langsung dengan peran saya sekarang, daripada membuat daftar panjang yang kurang fokus.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card reveal">
+            <h3>Business Systems</h3>
+            <ul class="skill-list">
+              <li>POS support and issue handling</li>
+              <li>Mitrasoft HRD monitoring</li>
+              <li>Feature adjustment based on operational needs</li>
+              <li>Practical troubleshooting for daily use systems</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>Database</h3>
+            <ul class="skill-list">
+              <li>PostgreSQL data handling</li>
+              <li>Input and delete transaction-related records</li>
+              <li>Data-oriented bug investigation</li>
+              <li>Operational data correction</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>Frontend</h3>
+            <ul class="skill-list">
+              <li>HTML, CSS, and vanilla JavaScript</li>
+              <li>Responsive layout implementation</li>
+              <li>Portfolio and landing page creation</li>
+              <li>Clean visual hierarchy for professional profiles</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>Professional Presentation</h3>
+            <ul class="skill-list">
+              <li>Content structuring for CV and portfolio</li>
+              <li>Clean one-page presentation</li>
+              <li>Lightweight static website setup</li>
+              <li>Simple and direct communication flow</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Approach</span>
+          <h2>Cara saya melihat teknologi, tampilan, dan hasil akhir.</h2>
+          <p>Saya tertarik pada pekerjaan yang tidak hanya selesai secara teknis, tetapi juga terasa matang saat dipakai atau dilihat. Karena itu, saya cenderung menjaga keseimbangan antara fungsi, kerapian, dan karakter visual.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card reveal">
+            <span class="service-badge">Thinking</span>
+            <h3>Logis dan Terstruktur</h3>
+            <p>Saya lebih nyaman memulai dari masalah inti, lalu menyusun solusi secara runtut agar hasilnya tetap efisien dan mudah dipahami.</p>
+            <ul class="service-list">
+              <li>Fokus pada kebutuhan yang benar-benar penting</li>
+              <li>Menghindari elemen yang tidak mendukung fungsi</li>
+              <li>Menjaga alur tetap jelas dari awal sampai akhir</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <span class="service-badge">Execution</span>
+            <h3>Praktis dan Adaptif</h3>
+            <p>Saya terbiasa bekerja pada sistem yang berubah sesuai kebutuhan pengguna, sehingga cukup fleksibel dalam menyesuaikan solusi.</p>
+            <ul class="service-list">
+              <li>Nyaman menerima perubahan yang masih relevan</li>
+              <li>Terbiasa memperbaiki sambil menjaga kestabilan</li>
+              <li>Cepat menyesuaikan diri dengan konteks kerja baru</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <span class="service-badge">Visual Taste</span>
+            <h3>Clean dan Dewasa</h3>
+            <p>Saya menyukai tampilan yang modern tetapi tenang, dengan detail yang cukup untuk terlihat canggih tanpa terasa berlebihan.</p>
+            <ul class="service-list">
+              <li>Tipografi jelas dan nyaman dibaca</li>
+              <li>Warna kalem dengan aksen yang terukur</li>
+              <li>Komposisi visual yang rapi dan konsisten</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <span class="service-badge">Learning</span>
+            <h3>Terus Berkembang</h3>
+            <p>Saya masih terus membangun pengalaman, tetapi itu juga membuat saya terbuka, cepat belajar, dan cukup berani mencoba pendekatan yang lebih segar.</p>
+            <ul class="service-list">
+              <li>Punya dasar teknis yang aktif dipakai saat ini</li>
+              <li>Tetap menjaga rasa ingin tahu pada hal baru</li>
+              <li>Menggabungkan disiplin kerja dengan sentuhan kreatif</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2>Kontak dan informasi singkat.</h2>
+          <p>Bagian ini memudahkan jika Anda ingin menghubungi saya, melihat identitas profesional saya, atau meninggalkan pesan singkat dengan format yang lebih rapi.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="card reveal">
+            <h3>Kontak</h3>
+            <ul class="contact-list">
+              <li class="contact-line">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M12 21a8.94 8.94 0 0 1-4.54-1.23L3 20.5l.77-4.3A9 9 0 1 1 12 21Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <path d="M8.8 8.9c.17-.37.34-.38.5-.39.13 0 .29-.01.45-.01.14 0 .35.05.53.43.18.39.62 1.52.67 1.63.06.11.1.24.02.39-.08.15-.12.24-.24.37-.12.13-.25.29-.35.39-.11.11-.22.23-.1.45.11.22.5.82 1.08 1.33.74.66 1.36.87 1.56.97.2.09.32.08.44-.05.12-.13.49-.58.62-.77.13-.2.26-.16.44-.1.18.07 1.16.55 1.36.65.2.09.33.14.38.22.05.09.05.5-.12.98-.16.47-.96.92-1.3.97-.34.06-.76.08-1.22-.07a7.35 7.35 0 0 1-1.42-.66c-2.49-1.07-4.11-3.8-4.23-3.97-.12-.17-1.01-1.35-1.01-2.57 0-1.22.64-1.82.86-2.07Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>082281388718</span>
+                </div>
+              </li>
+              <li class="contact-line">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M4 6.5h16v11H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Nama</strong>
+                  <span>Adzi Purnomo</span>
+                </div>
+              </li>
+              <li class="contact-line">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M12 21s6-3.95 6-10a6 6 0 1 0-12 0c0 6.05 6 10 6 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Posisi</strong>
+                  <span>IT Staff Programmer</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-actions" style="margin-top:22px;">
+              <a class="button button-primary" href="https://wa.me/6282281388718?text=Halo%20Adzi%2C%20saya%20melihat%20CV%20online%20Anda%20dan%20ingin%20terhubung." target="_blank" rel="noreferrer">Hubungi via WhatsApp</a>
+              <a class="button button-secondary" href="#home">Kembali ke Atas</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Pesan Singkat</h3>
+            <p>Form ini tidak memakai backend. Tujuannya hanya untuk membantu menyusun pesan singkat yang nantinya dibuka ke WhatsApp.</p>
+
+            <form class="contact-form" id="contactForm">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="name">Nama</label>
+                  <input id="name" name="name" type="text" placeholder="Nama Anda" required>
+                </div>
+                <div class="field">
+                  <label for="job">Profesi</label>
+                  <input id="job" name="job" type="text" placeholder="Contoh: Freelancer / Mahasiswa">
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="goal">Tujuan</label>
+                  <input id="goal" name="goal" type="text" placeholder="Perkenalan / diskusi / kolaborasi">
+                </div>
+                <div class="field">
+                  <label for="budget">Catatan</label>
+                  <input id="budget" name="budget" type="text" placeholder="Opsional">
+                </div>
+              </div>
+
+              <div class="field">
+                  <label for="message">Pesan</label>
+                  <textarea id="message" name="message" placeholder="Tulis pesan singkat yang ingin Anda sampaikan." required></textarea>
+              </div>
+
+              <button class="button button-primary" type="submit">Siapkan Pesan</button>
+              <p class="field-note" id="formNote">Pesan akan diformat otomatis lalu dibuka ke WhatsApp.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-shell">
+      <p>&copy; 2026 Adzi Purnomo. Dibangun dengan HTML, CSS, dan JavaScript tanpa framework.</p>
+      <p>Siap dipakai untuk GitHub Pages atau hosting statis sederhana.</p>
     </div>
   </footer>
 
-  <div id="zoomModal" class="zoom-modal" onclick="closeZoom()">
-    <span class="close" onclick="closeZoom()">&times;</span>
-    <div class="zoom-content">
-      <img id="zoomedImage" src="" alt="Zoomed">
-      <iframe id="zoomedVideo" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <div id="modalPortfolio1" class="modal" onclick="closeModal('modalPortfolio1')">
-    <span class="close" onclick="closeModal('modalPortfolio1')">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <img src="https://cdn.pixabay.com/photo/2025/09/16/04/31/service-9836993_1280.png" onclick="zoomImage(this.src)" alt="Portfolio 1">
-      <img src="https://cdn.pixabay.com/photo/2024/11/30/04/27/app-9234005_1280.png" onclick="zoomImage(this.src)" alt="Portfolio 2">
-      <img src="https://cdn.pixabay.com/photo/2024/11/30/05/00/database-9234032_1280.png" onclick="zoomImage(this.src)" alt="Portfolio 3">
-    </div>
-  </div>
-
-    <div id="modalPortfolio2" class="modal" onclick="closeModal('modalPortfolio2')">
-      <span class="close" onclick="closeModal('modalPortfolio2')">&times;</span>
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <img src="https://cdn.pixabay.com/photo/2024/11/30/04/28/design-9234006_960_720.png" onclick="zoomImage(this.src)" alt="Design 1">
-        <img src="https://cdn.pixabay.com/photo/2025/09/16/02/40/figma-9836904_1280.png" onclick="zoomImage(this.src)" alt="Design 2">
-      </div>
-    </div>
-
-  <div id="modalPortfolio3" class="modal" onclick="closeModal('modalPortfolio3')">
-    <span class="close" onclick="closeModal('modalPortfolio3')">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <img src="https://cdn.pixabay.com/photo/2024/11/30/04/23/web-9234002_1280.png" onclick="zoomImage(this.src)" alt="App 1">
-      <img src="https://cdn.pixabay.com/photo/2024/11/30/04/47/web-9234021_1280.png" onclick="zoomImage(this.src)" alt="App 2">
-      <img src="https://cdn.pixabay.com/photo/2024/11/30/04/46/app-9234020_1280.png" onclick="zoomImage(this.src)" alt="App 3">
-    </div>
-  </div>
-
-  <div id="modalAppsSuite" class="modal gallery-modal" onclick="closeModal('modalAppsSuite')">
-    <span class="close" onclick="closeModal('modalAppsSuite')">&times;</span>
-    <div class="modal-content gallery-content" onclick="event.stopPropagation()">
-      <div class="gallery-toolbar">
-        <div class="gallery-filters">
-          <button class="gallery-filter active" type="button" data-filter="all" data-i18n="gallery_filter_all">Semua</button>
-          <button class="gallery-filter" type="button" data-filter="web" data-i18n="gallery_filter_web">Web Apps</button>
-          <button class="gallery-filter" type="button" data-filter="service" data-i18n="gallery_filter_service">Service</button>
-          <button class="gallery-filter" type="button" data-filter="archive" data-i18n="gallery_filter_archive">Arsip</button>
-        </div>
-        <div class="gallery-count"><span data-i18n="gallery_count_label">Total</span>: <span id="galleryCount">0</span></div>
-      </div>
-      <div class="gallery-grid" id="appsSuiteGallery">
-        <img src="assets/projects/apps-adzi-web-1.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 1" data-category="web">
-        <img src="assets/projects/apps-adzi-web-2.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 2" data-category="web">
-        <img src="assets/projects/apps-adzi-web-3.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 3" data-category="web">
-        <img src="assets/projects/apps-adzi-web-4.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 4" data-category="web">
-        <img src="assets/projects/apps-adzi-web-5.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 5" data-category="web">
-        <img src="assets/projects/apps-adzi-web-6.png" onclick="zoomImage(this.src)" alt="Apps Adzi Web 6" data-category="web">
-        <img src="assets/projects/apps-elektron-1.png" onclick="zoomImage(this.src)" alt="Apps Elektron 1" data-category="service">
-        <img src="assets/projects/apps-elektron-2.png" onclick="zoomImage(this.src)" alt="Apps Elektron 2" data-category="service">
-        <img src="assets/projects/apps-elektron-3.png" onclick="zoomImage(this.src)" alt="Apps Elektron 3" data-category="service">
-        <img src="assets/projects/apps-elektron-4.png" onclick="zoomImage(this.src)" alt="Apps Elektron 4" data-category="service">
-        <img src="assets/projects/apps-elektron-5.png" onclick="zoomImage(this.src)" alt="Apps Elektron 5" data-category="service">
-        <img src="assets/projects/apps-service-1.png" onclick="zoomImage(this.src)" alt="Apps Service 1" data-category="service">
-        <img src="assets/projects/apps-service-2.png" onclick="zoomImage(this.src)" alt="Apps Service 2" data-category="service">
-        <img src="assets/projects/apps-service-3.png" onclick="zoomImage(this.src)" alt="Apps Service 3" data-category="service">
-        <img src="assets/projects/arsip-unh-1.png" onclick="zoomImage(this.src)" alt="Arsip UNH 1" data-category="archive">
-        <img src="assets/projects/arsip-unh-2.png" onclick="zoomImage(this.src)" alt="Arsip UNH 2" data-category="archive">
-        <img src="assets/projects/arsip-unh-3.png" onclick="zoomImage(this.src)" alt="Arsip UNH 3" data-category="archive">
-        <img src="assets/projects/arsip-unh-4.png" onclick="zoomImage(this.src)" alt="Arsip UNH 4" data-category="archive">
-        <img src="assets/projects/arsip-unh-5.png" onclick="zoomImage(this.src)" alt="Arsip UNH 5" data-category="archive">
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    var translations = {
-      id: {
-        nav_home: "Home",
-        nav_about: "About",
-        nav_experience: "Experience",
-        nav_projects: "Projects",
-        nav_skills: "Skills",
-        nav_education: "Education",
-        nav_contact: "Contact",
-        hero_eyebrow: "Future CV",
-        hero_subtitle: "Technician | Web Developer | IT Staff",
-        hero_chip_1: "IoT Builder",
-        hero_chip_2: "Web Systems",
-        hero_chip_3: "Hardware + Software",
-        hero_cta_primary: "Explore My Work",
-        hero_cta_secondary: "Contact Me",
-        hero_profile_desc: "Berbasis di Indonesia. Terbiasa menangani produk elektronik, sistem IoT, dan aplikasi berbasis web.",
-        hero_focus_label: "Focus",
-        hero_focus_value: "IoT, Web Apps, Automation",
-        hero_stack_label: "Stack",
-        hero_stack_value: "JS, Python, PHP, MySQL",
-        about_title: "About Me",
-        about_subtitle: "Profil singkat dengan fokus pada kemampuan teknis, analisis, dan solusi digital modern.",
-        about_body: "Lulusan S1 Teknik Informatika dengan IPK 3.78, memiliki latar belakang sebagai teknisi elektronik konsumen di PT SITCOMTARA sejak 2017. Terbiasa melakukan troubleshooting perangkat, analisis teknis, dan edukasi pelanggan secara profesional. Berpengalaman mengembangkan solusi berbasis teknologi seperti IoT dan pemrograman sistem berbasis web.",
-        about_item_1: "Analisis perangkat dan otomasi sistem.",
-        about_item_2: "Pengembangan web responsif dan interaktif.",
-        about_item_3: "Integrasi IoT untuk monitoring real time.",
-        about_item_4: "Edukasi teknis dan komunikasi dengan klien.",
-        exp_title: "Experience",
-        exp_subtitle: "Teknisi CE (Consumer Electronics) di PT SITCOMTARA (2017 - 2025)",
-        exp_role_title: "Role Impact",
-        exp_role_1: "Diagnosa dan perbaikan 500+ perangkat dengan keberhasilan 98% di kunjungan pertama.",
-        exp_role_2: "Instalasi dan edukasi teknis untuk 200+ pelanggan.",
-        exp_role_3: "Efisiensi diagnosa awal naik hingga 90% lewat analisis pola kerusakan.",
-        exp_service_title: "Service Excellence",
-        exp_service_1: "Kolaborasi dengan tim service untuk menjaga standar layanan Samsung.",
-        exp_service_2: "Dokumentasi kasus dan rekomendasi perawatan preventif.",
-        exp_service_3: "Penguatan KPI layanan melalui troubleshooting berbasis data.",
-        projects_title: "Projects",
-        projects_subtitle: "Beberapa proyek unggulan dengan fokus pada pengalaman visual modern.",
-        project_suite_title: "Apps Suite Gallery",
-        project_suite_body: "Koleksi tampilan aplikasi yang pernah saya bangun untuk kebutuhan web, service center, dan sistem arsip. Klik untuk melihat seluruh screenshot secara lengkap.",
-        project_suite_tag_1: "Web Apps",
-        project_suite_tag_2: "Service System",
-        project_suite_tag_3: "Archive Platform",
-        gallery_filter_all: "Semua",
-        gallery_filter_web: "Web Apps",
-        gallery_filter_service: "Service",
-        gallery_filter_archive: "Arsip",
-        gallery_count_label: "Total",
-        project_1_body: "Layanan pengembangan website dari desain hingga implementasi. Website responsif dan interaktif menggunakan HTML, CSS, JavaScript, dan PHP.",
-        project_2_body: "Desain logo, banner, dan visual media sosial dengan Adobe Photoshop, Figma, dan Canva.",
-        project_3_body: "Aplikasi mobile untuk manajemen tugas menggunakan Flutter dan Firebase sebagai backend.",
-        project_4_body: "Proyek video editing untuk media sosial dan presentasi dengan efek visual dan transisi modern.",
-        project_btn_view: "Lihat Screenshot",
-        project_btn_gallery: "Lihat Gallery",
-        project_btn_video: "Lihat Video",
-        skills_title: "Skills",
-        skills_subtitle: "Teknologi yang dikuasai untuk membangun solusi digital end-to-end.",
-        edu_title: "Education",
-        edu_subtitle: "Perjalanan akademik dan fokus pembelajaran utama.",
-        edu_gpa_label: "IPK:",
-        edu_focus_1: "Fokus: Pengembangan Perangkat Lunak, Analisis Data, IoT, Sistem Informasi.",
-        edu_focus_2: "Skripsi: Prototype Sistem Smart Garden Berbasis IoT.",
-        edu_focus_3: "Konsentrasi pada elektronika industri dan sistem kendali.",
-        contact_title: "Terima kasih sudah berkunjung.",
-        contact_body: "Jika Anda ingin berdiskusi lebih lanjut atau memiliki pertanyaan terkait layanan saya, silakan kirim pesan menggunakan formulir berikut. Saya akan merespons secepat mungkin secara profesional.",
-        contact_cta: "Formulir ini langsung mengarah ke email saya.",
-        contact_label_name: "Nama",
-        contact_label_email: "Email",
-        contact_label_subject: "Subjek",
-        contact_label_message: "Pesan",
-        contact_placeholder_name: "Nama kamu",
-        contact_placeholder_email: "email@domain.com",
-        contact_placeholder_subject: "Judul pesan",
-        contact_placeholder_message: "Tulis pesan kamu di sini...",
-        contact_btn: "Kirim Email",
-        footer_copy: "@ 2025 Adzi Purnomo. All Rights Reserved."
-      },
-      en: {
-        nav_home: "Home",
-        nav_about: "About",
-        nav_experience: "Experience",
-        nav_projects: "Projects",
-        nav_skills: "Skills",
-        nav_education: "Education",
-        nav_contact: "Contact",
-        hero_eyebrow: "Future CV",
-        hero_subtitle: "Technician | Web Developer | IT Staff",
-        hero_chip_1: "IoT Builder",
-        hero_chip_2: "Web Systems",
-        hero_chip_3: "Hardware + Software",
-        hero_cta_primary: "Explore My Work",
-        hero_cta_secondary: "Contact Me",
-        hero_profile_desc: "Based in Indonesia. Experienced in handling electronics, IoT systems, and web-based applications.",
-        hero_focus_label: "Focus",
-        hero_focus_value: "IoT, Web Apps, Automation",
-        hero_stack_label: "Stack",
-        hero_stack_value: "JS, Python, PHP, MySQL",
-        about_title: "About Me",
-        about_subtitle: "A concise profile focused on technical capability, analysis, and modern digital solutions.",
-        about_body: "Computer Science graduate (GPA 3.78) with a background as a consumer electronics technician at PT SITCOMTARA since 2017. Skilled in troubleshooting, technical analysis, and professional customer education. Experienced in building technology solutions such as IoT and web-based systems.",
-        about_item_1: "Device analysis and system automation.",
-        about_item_2: "Responsive and interactive web development.",
-        about_item_3: "IoT integration for real-time monitoring.",
-        about_item_4: "Technical education and client communication.",
-        exp_title: "Experience",
-        exp_subtitle: "CE Technician (Consumer Electronics) at PT SITCOMTARA (2017 - 2025)",
-        exp_role_title: "Role Impact",
-        exp_role_1: "Diagnosed and repaired 500+ devices with a 98% first-visit success rate.",
-        exp_role_2: "Installation and technical education for 200+ customers.",
-        exp_role_3: "Boosted initial diagnosis efficiency by up to 90% through fault pattern analysis.",
-        exp_service_title: "Service Excellence",
-        exp_service_1: "Collaborated with service teams to maintain Samsung service standards.",
-        exp_service_2: "Documented cases and delivered preventive maintenance recommendations.",
-        exp_service_3: "Strengthened service KPIs through data-driven troubleshooting.",
-        projects_title: "Projects",
-        projects_subtitle: "Selected work with a focus on modern visual experience.",
-        project_suite_title: "Apps Suite Gallery",
-        project_suite_body: "A collection of app interfaces I built for web, service center, and archival systems. Click to view the complete screenshot gallery.",
-        project_suite_tag_1: "Web Apps",
-        project_suite_tag_2: "Service System",
-        project_suite_tag_3: "Archive Platform",
-        gallery_filter_all: "All",
-        gallery_filter_web: "Web Apps",
-        gallery_filter_service: "Service",
-        gallery_filter_archive: "Archive",
-        gallery_count_label: "Total",
-        project_1_body: "Website development service from design to implementation. Responsive and interactive websites using HTML, CSS, JavaScript, and PHP.",
-        project_2_body: "Logo, banner, and social media visual design using Adobe Photoshop, Figma, and Canva.",
-        project_3_body: "A mobile app for task management using Flutter and Firebase as the backend.",
-        project_4_body: "Video editing projects for social media and presentations with modern visual transitions.",
-        project_btn_view: "View Screenshots",
-        project_btn_gallery: "View Gallery",
-        project_btn_video: "Watch Video",
-        skills_title: "Skills",
-        skills_subtitle: "Technologies used to build end-to-end digital solutions.",
-        edu_title: "Education",
-        edu_subtitle: "Academic journey and primary focus areas.",
-        edu_gpa_label: "GPA:",
-        edu_focus_1: "Focus: Software Development, Data Analysis, IoT, Information Systems.",
-        edu_focus_2: "Thesis: IoT-based Smart Garden System Prototype.",
-        edu_focus_3: "Concentration in industrial electronics and control systems.",
-        contact_title: "Thank you for visiting.",
-        contact_body: "If you would like to discuss further or have any questions about my services, please send a message using the form below. I will respond as promptly and professionally as possible.",
-        contact_cta: "This form sends your message directly to my email.",
-        contact_label_name: "Name",
-        contact_label_email: "Email",
-        contact_label_subject: "Subject",
-        contact_label_message: "Message",
-        contact_placeholder_name: "Your name",
-        contact_placeholder_email: "email@domain.com",
-        contact_placeholder_subject: "Message subject",
-        contact_placeholder_message: "Write your message here...",
-        contact_btn: "Send Email",
-        footer_copy: "Ac 2025 Adzi Purnomo. All Rights Reserved."
-      }
-    };
+    (function () {
+      const body = document.body;
+      const themeToggle = document.getElementById("themeToggle");
+      const langToggle = document.getElementById("langToggle");
+      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+      const sections = Array.from(document.querySelectorAll("main section[id]"));
+      const revealItems = document.querySelectorAll(".reveal");
+      const themeStorageKey = "adzi-portfolio-theme";
+      const languageStorageKey = "adzi-portfolio-language";
+      const contactForm = document.getElementById("contactForm");
+      const formNote = document.getElementById("formNote");
+      const nameField = document.getElementById("name");
+      const jobField = document.getElementById("job");
+      const goalField = document.getElementById("goal");
+      const budgetField = document.getElementById("budget");
+      const messageField = document.getElementById("message");
+      const whatsappNumber = "6282281388718";
+      let currentLanguage = "id";
 
-    function applyLanguage(lang) {
-      var textNodes = document.querySelectorAll("[data-i18n]");
-      textNodes.forEach(function(node) {
-        var key = node.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-          node.textContent = translations[lang][key];
-        }
-      });
-
-      var placeholders = document.querySelectorAll("[data-i18n-placeholder]");
-      placeholders.forEach(function(node) {
-        var key = node.getAttribute("data-i18n-placeholder");
-        if (translations[lang] && translations[lang][key]) {
-          node.setAttribute("placeholder", translations[lang][key]);
-        }
-      });
-
-      var toggle = document.getElementById("langToggle");
-      if (toggle) {
-        toggle.textContent = lang === "id" ? "EN" : "ID";
-      }
-      document.documentElement.setAttribute("lang", lang);
-      try {
-        localStorage.setItem("cvLang", lang);
-      } catch (e) {}
-    }
-
-    function animateCount(el) {
-      var target = parseFloat(el.getAttribute("data-target") || "0");
-      var suffix = el.getAttribute("data-suffix") || "";
-      var duration = 1200;
-      var start = 0;
-      var startTime = null;
-
-      function tick(timestamp) {
-        if (!startTime) {
-          startTime = timestamp;
-        }
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-        var value = Math.floor(start + (target - start) * progress);
-        el.textContent = String(value) + suffix;
-        if (progress < 1) {
-          requestAnimationFrame(tick);
-        } else {
-          el.textContent = String(target) + suffix;
-        }
-      }
-
-      requestAnimationFrame(tick);
-    }
-
-    function initCounters() {
-      var counters = document.querySelectorAll(".count-up");
-      if (!counters.length) {
-        return;
-      }
-
-      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion) {
-        counters.forEach(function(counter) {
-          var suffix = counter.getAttribute("data-suffix") || "";
-          var target = counter.getAttribute("data-target") || "0";
-          counter.textContent = String(target) + suffix;
-        });
-        return;
-      }
-
-      var observer = new IntersectionObserver(function(entries, obs) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            obs.unobserve(entry.target);
+      const translations = {
+        id: {
+          title: "Adzi Purnomo | IT Staff Programmer",
+          description: "CV online Adzi Purnomo, IT Staff Programmer yang menangani sistem POS, PostgreSQL, dan Mitrasoft HRD dengan pendekatan kerja yang rapi, adaptif, dan profesional.",
+          text: {
+            "#brandRole": "IT Staff Programmer",
+            "#navHome": "Home",
+            "#navAbout": "About",
+            "#navExperience": "Experience",
+            "#navStrengths": "Strengths",
+            "#navHighlights": "Highlights",
+            "#navSkills": "Skills",
+            "#navContact": "Contact",
+            "#heroEyebrow": "Curriculum Vitae",
+            "#heroTitle": "Teknis, <span>adaptif</span>, dan terbiasa bekerja rapi.",
+            "#heroLead": "Saya adalah <span class=\"highlight\">IT Staff Programmer</span> di PT Surya Pratama Keramindo. Saat ini saya menangani perbaikan bug, pengelolaan data pada sistem POS berbasis PostgreSQL, serta monitoring dan penyesuaian kebutuhan pada Mitrasoft HRD. Saya menyukai pekerjaan yang menuntut ketelitian, logika yang jelas, dan hasil akhir yang tetap enak digunakan.",
+            "#heroPoint1Title": "Terbiasa menangani sistem aktif",
+            "#heroPoint1Text": "Fokus pada bug fixing, kestabilan alur kerja, dan kebutuhan operasional yang benar-benar dipakai.",
+            "#heroPoint2Title": "Punya sisi teknis dan visual",
+            "#heroPoint2Text": "Nyaman bekerja di area sistem, tetapi tetap peduli pada kerapian tampilan dan kenyamanan pengguna.",
+            "#heroCtaPrimary": "Lihat Pengalaman",
+            "#heroCtaSecondary": "Lihat Kontak",
+            "#introCopyText": "Fokus pada sistem bisnis, support aplikasi, dan presentasi digital yang rapi.",
+            "#introBadge": "Currently Active",
+            "#introList1": "Menangani bug fixing, support aplikasi internal, dan pengelolaan data yang berhubungan dengan POS.",
+            "#introList2": "Monitoring Mitrasoft HRD serta membantu penyesuaian fitur berdasarkan kebutuhan tim HRD.",
+            "#introList3": "Memiliki minat pada pengembangan tampilan web yang bersih, modern, dan mudah dipahami.",
+            "#metric1": "Bulan sebagai IT Staff Programmer",
+            "#metric2": "Sistem utama yang ditangani",
+            "#metric3": "Fokus: rapi, profesional, dan realistis",
+            "#aboutEyebrow": "About",
+            "#aboutTitle": "Latar belakang teknis dengan cara kerja yang terstruktur dan mudah beradaptasi.",
+            "#aboutLead": "Saya lebih nyaman bekerja pada hal-hal yang konkret: memahami masalah, membaca pola, memperbaiki bagian yang bermasalah, lalu memastikan hasilnya tetap rapi dan mudah digunakan. Pendekatan itu saya pakai baik untuk sistem internal maupun tampilan web.",
+            "#aboutCard1Title": "Profil Singkat",
+            "#aboutCard1Body": "Saat ini saya bekerja sebagai <span class=\"highlight\">IT Staff Programmer</span> di <span class=\"highlight\">PT Surya Pratama Keramindo</span>. Pekerjaan saya berfokus pada stabilitas sistem, perbaikan bug, pengelolaan data pada POS berbasis PostgreSQL, serta monitoring dan penyesuaian fitur pada Mitrasoft HRD.",
+            "#aboutCard1List1": "Terbiasa bekerja dengan kebutuhan operasional yang harus jalan, bukan sekadar demo.",
+            "#aboutCard1List2": "Paham bahwa sistem yang bagus harus mudah dipakai dan mudah dipelihara.",
+            "#aboutCard1List3": "Menjaga keseimbangan antara fungsi teknis, kerapian struktur, dan pengalaman pengguna.",
+            "#aboutCard2Title": "Gaya Kerja",
+            "#aboutCard2Body": "Saya menyukai hasil yang bersih dan jelas. Bagi saya, tampilan yang baik bukan yang ramai, tetapi yang mampu menyampaikan informasi dengan ringan, teratur, dan tetap terasa modern.",
+            "#aboutCard2List1": "Mengutamakan logika alur sebelum menambah elemen visual.",
+            "#aboutCard2List2": "Lebih suka desain yang dewasa, simpel, dan tidak berlebihan.",
+            "#aboutCard2List3": "Nyaman belajar hal baru selama masih relevan dan bisa diterapkan dengan baik.",
+            "#experienceEyebrow": "Experience",
+            "#experienceTitle": "Pengalaman kerja yang membentuk ketelitian, kecepatan belajar, dan cara berpikir sistematis.",
+            "#experienceLead": "Lingkungan kerja saya saat ini menuntut respons yang cepat, pemahaman teknis yang jelas, dan kemampuan menyesuaikan sistem dengan kebutuhan pengguna yang terus berjalan.",
+            "#experienceCard1Title": "PT Surya Pratama Keramindo",
+            "#experience .about-grid > article:first-child > p": "<span class=\"highlight\">IT Staff Programmer</span> - 7 Bulan",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(1)": "Fix bug pada sistem yang digunakan untuk kebutuhan operasional perusahaan.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(2)": "Input dan delete nota karyawan berdasarkan kebutuhan database <span class=\"highlight\">PostgreSQL</span> pada aplikasi POS.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(3)": "Monitoring kendala yang terjadi pada <span class=\"highlight\">Mitrasoft HRD</span> agar aktivitas HRD tidak terganggu.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(4)": "Menambahkan fitur yang dibutuhkan HRD sesuai kebutuhan operasional yang berjalan.",
+            "#experience .about-grid > article:last-child h3": "Ruang Lingkup Pekerjaan",
+            "#experience .about-grid > article:last-child p": "Dalam pekerjaan sehari-hari, saya tidak hanya melihat dari sisi teknis, tetapi juga dari sisi penggunaan. Sistem yang baik harus stabil, mudah dipahami, dan bisa mendukung pekerjaan tim tanpa menambah kebingungan baru.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(1)": "Mengevaluasi masalah dari data, alur kerja, dan kebutuhan pengguna.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(2)": "Menjaga agar perubahan fitur tetap relevan dengan proses kerja yang berjalan.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(3)": "Terbiasa bekerja rapi pada hal-hal kecil yang berdampak pada operasional harian.",
+            "#results .section-head .eyebrow": "Strengths",
+            "#results .section-head h2": "Kekuatan yang paling terasa dalam cara saya bekerja.",
+            "#results .section-head p": "Bagian ini merangkum kualitas kerja yang paling sering saya gunakan: berpikir runtut, cukup detail, tetap fleksibel, dan berusaha membuat hasil akhir terlihat bersih sekaligus fungsional.",
+            "#results .result-card:nth-child(1) strong": "Rapi",
+            "#results .result-card:nth-child(1) span": "Terbiasa menyusun dengan jelas",
+            "#results .result-card:nth-child(1) p": "Baik dalam sistem maupun tampilan, saya lebih nyaman dengan struktur yang bersih dan mudah diikuti.",
+            "#results .result-card:nth-child(2) strong": "Adaptif",
+            "#results .result-card:nth-child(2) span": "Cepat menyesuaikan kebutuhan",
+            "#results .result-card:nth-child(2) p": "Nyaman menangani perubahan, perbaikan, atau tambahan fitur selama arahnya jelas dan bisa dieksekusi.",
+            "#results .result-card:nth-child(3) strong": "Teknis",
+            "#results .result-card:nth-child(3) span": "Nyaman dengan sistem aktif",
+            "#results .result-card:nth-child(3) p": "Terbiasa bekerja pada aplikasi yang langsung dipakai pengguna, jadi fokus saya bukan teori, tetapi fungsi nyata.",
+            "#results .result-card:nth-child(4) strong": "Kreatif",
+            "#results .result-card:nth-child(4) span": "Punya rasa pada tampilan",
+            "#results .result-card:nth-child(4) p": "Saya menyukai tampilan yang modern dan sedikit berbeda, tetapi tetap dijaga agar profesional dan tidak berlebihan.",
+            "#projects .section-head .eyebrow": "Highlights",
+            "#projects .section-head h2": "Area yang paling mencerminkan minat dan arah pengembangan saya.",
+            "#projects .section-head p": "Selain pekerjaan inti di sistem internal, saya juga tertarik pada cara teknologi dipresentasikan dengan lebih modern, lebih ringan, dan tetap enak dipahami.",
+            "#projects .project-card:nth-child(1) h3": "Web Profile yang Bersih dan Modern",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(1)": "<strong>Fokus:</strong> Tampilan web satu halaman yang rapi, ringan, dan nyaman dibaca.",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(2)": "<strong>Pendekatan:</strong> Mengutamakan struktur informasi, tipografi, dan ritme visual yang tenang.",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(3)": "<strong>Nilai:</strong> Cocok untuk profil profesional, personal website, atau CV online yang modern.",
+            "#projects .project-card:nth-child(2) h3": "Perpaduan Sistem dan Presentasi",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(1)": "<strong>Fokus:</strong> Menggabungkan cara berpikir teknis dengan perhatian pada tampilan dan pengalaman pengguna.",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(2)": "<strong>Pendekatan:</strong> Menjaga agar halaman tetap ringan, jelas, dan tidak kehilangan karakter.",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(3)": "<strong>Nilai:</strong> Memberi kesan bahwa teknologi tidak harus kaku untuk tetap terlihat profesional.",
+            "#projects .project-card:nth-child(3) h3": "Ketertarikan pada Detail yang Fungsional",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(1)": "<strong>Fokus:</strong> Hal-hal kecil seperti alur, penempatan informasi, dan konsistensi visual.",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(2)": "<strong>Pendekatan:</strong> Mengurangi elemen yang tidak perlu dan memperkuat bagian yang benar-benar penting.",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(3)": "<strong>Nilai:</strong> Membuat hasil akhir terasa lebih matang, lebih tenang, dan tetap punya identitas.",
+            "#skills .section-head .eyebrow": "Skills",
+            "#skills .section-head h2": "Keahlian yang paling relevan dengan pekerjaan saya saat ini.",
+            "#skills .section-head p": "Saya lebih memilih menampilkan skill yang benar-benar saya pakai dan punya hubungan langsung dengan peran saya sekarang, daripada membuat daftar panjang yang kurang fokus.",
+            "#skills .card:nth-child(1) h3": "Business Systems",
+            "#skills .card:nth-child(1) .skill-list li:nth-child(1)": "POS support and issue handling",
+            "#skills .card:nth-child(1) .skill-list li:nth-child(2)": "Mitrasoft HRD monitoring",
+            "#skills .card:nth-child(1) .skill-list li:nth-child(3)": "Feature adjustment based on operational needs",
+            "#skills .card:nth-child(1) .skill-list li:nth-child(4)": "Practical troubleshooting for daily use systems",
+            "#skills .card:nth-child(2) h3": "Database",
+            "#skills .card:nth-child(2) .skill-list li:nth-child(1)": "PostgreSQL data handling",
+            "#skills .card:nth-child(2) .skill-list li:nth-child(2)": "Input and delete transaction-related records",
+            "#skills .card:nth-child(2) .skill-list li:nth-child(3)": "Data-oriented bug investigation",
+            "#skills .card:nth-child(2) .skill-list li:nth-child(4)": "Operational data correction",
+            "#skills .card:nth-child(3) h3": "Frontend",
+            "#skills .card:nth-child(3) .skill-list li:nth-child(1)": "HTML, CSS, and vanilla JavaScript",
+            "#skills .card:nth-child(3) .skill-list li:nth-child(2)": "Responsive layout implementation",
+            "#skills .card:nth-child(3) .skill-list li:nth-child(3)": "Portfolio and landing page creation",
+            "#skills .card:nth-child(3) .skill-list li:nth-child(4)": "Clean visual hierarchy for professional profiles",
+            "#skills .card:nth-child(4) h3": "Professional Presentation",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(1)": "Content structuring for CV and portfolio",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(2)": "Clean one-page presentation",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(3)": "Lightweight static website setup",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(4)": "Simple and direct communication flow",
+            "#services .section-head .eyebrow": "Approach",
+            "#services .section-head h2": "Cara saya melihat teknologi, tampilan, dan hasil akhir.",
+            "#services .section-head p": "Saya tertarik pada pekerjaan yang tidak hanya selesai secara teknis, tetapi juga terasa matang saat dipakai atau dilihat. Karena itu, saya cenderung menjaga keseimbangan antara fungsi, kerapian, dan karakter visual.",
+            "#services .service-card:nth-child(1) .service-badge": "Thinking",
+            "#services .service-card:nth-child(1) h3": "Logis dan Terstruktur",
+            "#services .service-card:nth-child(1) p": "Saya lebih nyaman memulai dari masalah inti, lalu menyusun solusi secara runtut agar hasilnya tetap efisien dan mudah dipahami.",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(1)": "Fokus pada kebutuhan yang benar-benar penting",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(2)": "Menghindari elemen yang tidak mendukung fungsi",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(3)": "Menjaga alur tetap jelas dari awal sampai akhir",
+            "#services .service-card:nth-child(2) .service-badge": "Execution",
+            "#services .service-card:nth-child(2) h3": "Praktis dan Adaptif",
+            "#services .service-card:nth-child(2) p": "Saya terbiasa bekerja pada sistem yang berubah sesuai kebutuhan pengguna, sehingga cukup fleksibel dalam menyesuaikan solusi.",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(1)": "Nyaman menerima perubahan yang masih relevan",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(2)": "Terbiasa memperbaiki sambil menjaga kestabilan",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(3)": "Cepat menyesuaikan diri dengan konteks kerja baru",
+            "#services .service-card:nth-child(3) .service-badge": "Visual Taste",
+            "#services .service-card:nth-child(3) h3": "Clean dan Dewasa",
+            "#services .service-card:nth-child(3) p": "Saya menyukai tampilan yang modern tetapi tenang, dengan detail yang cukup untuk terlihat canggih tanpa terasa berlebihan.",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(1)": "Tipografi jelas dan nyaman dibaca",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(2)": "Warna kalem dengan aksen yang terukur",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(3)": "Komposisi visual yang rapi dan konsisten",
+            "#services .service-card:nth-child(4) .service-badge": "Learning",
+            "#services .service-card:nth-child(4) h3": "Terus Berkembang",
+            "#services .service-card:nth-child(4) p": "Saya masih terus membangun pengalaman, tetapi itu juga membuat saya terbuka, cepat belajar, dan cukup berani mencoba pendekatan yang lebih segar.",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(1)": "Punya dasar teknis yang aktif dipakai saat ini",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(2)": "Tetap menjaga rasa ingin tahu pada hal baru",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(3)": "Menggabungkan disiplin kerja dengan sentuhan kreatif",
+            "#contact .section-head .eyebrow": "Contact",
+            "#contact .section-head h2": "Kontak dan informasi singkat.",
+            "#contact .section-head p": "Bagian ini memudahkan jika Anda ingin menghubungi saya, melihat identitas profesional saya, atau meninggalkan pesan singkat dengan format yang lebih rapi.",
+            "#contact .contact-grid > article:first-child h3": "Kontak",
+            "#contact .contact-line:nth-child(2) strong": "Nama",
+            "#contact .contact-line:nth-child(3) strong": "Posisi",
+            "#contact .contact-line:nth-child(3) div span": "IT Staff Programmer",
+            "#contact .contact-actions .button-primary": "Hubungi via WhatsApp",
+            "#contact .contact-actions .button-secondary": "Kembali ke Atas",
+            "#contact .contact-grid > article:last-child h3": "Pesan Singkat",
+            "#contact .contact-grid > article:last-child > p": "Form ini tidak memakai backend. Tujuannya hanya untuk membantu menyusun pesan singkat yang nantinya dibuka ke WhatsApp.",
+            "label[for='name']": "Nama",
+            "label[for='job']": "Profesi",
+            "label[for='goal']": "Tujuan",
+            "label[for='budget']": "Catatan",
+            "label[for='message']": "Pesan",
+            "#contactForm button[type='submit']": "Siapkan Pesan",
+            "#formNote": "Pesan akan diformat otomatis lalu dibuka ke WhatsApp.",
+            ".footer-shell p:first-child": "&copy; 2026 Adzi Purnomo. Dibangun dengan HTML, CSS, dan JavaScript tanpa framework.",
+            ".footer-shell p:last-child": "Siap dipakai untuk GitHub Pages atau hosting statis sederhana."
+          },
+          placeholders: {
+            "#name": "Nama Anda",
+            "#job": "Contoh: Freelancer / Mahasiswa",
+            "#goal": "Perkenalan / diskusi / kolaborasi",
+            "#budget": "Opsional",
+            "#message": "Tulis pesan singkat yang ingin Anda sampaikan."
+          },
+          form: {
+            required: "Nama dan kebutuhan singkat wajib diisi.",
+            prepared: "Draft pesan sudah disiapkan ke WhatsApp.",
+            whatsappIntro: "Halo Adzi, saya melihat CV online Anda dan ingin terhubung.",
+            name: "Nama",
+            job: "Profesi",
+            goal: "Tujuan",
+            budget: "Catatan",
+            message: "Pesan"
+          },
+          aria: {
+            home: "Kembali ke beranda",
+            themeDark: "Ubah ke tema terang",
+            themeLight: "Ubah ke tema gelap",
+            language: "Ganti bahasa"
           }
-        });
-      }, { threshold: 0.6 });
+        },
+        en: {
+          title: "Adzi Purnomo | IT Staff Programmer",
+          description: "Online CV of Adzi Purnomo, an IT Staff Programmer handling POS systems, PostgreSQL, and Mitrasoft HRD with a neat, adaptive, and professional working approach.",
+          text: {
+            "#brandRole": "IT Staff Programmer",
+            "#navHome": "Home",
+            "#navAbout": "About",
+            "#navExperience": "Experience",
+            "#navStrengths": "Strengths",
+            "#navHighlights": "Highlights",
+            "#navSkills": "Skills",
+            "#navContact": "Contact",
+            "#heroEyebrow": "Curriculum Vitae",
+            "#heroTitle": "Technical, <span>adaptive</span>, and used to working with structure.",
+            "#heroLead": "I am an <span class=\"highlight\">IT Staff Programmer</span> at PT Surya Pratama Keramindo. My current work involves bug fixing, PostgreSQL-based POS data handling, and monitoring plus requirement adjustments within Mitrasoft HRD. I enjoy work that requires precision, clear logic, and an end result that remains comfortable to use.",
+            "#heroPoint1Title": "Used to handling live systems",
+            "#heroPoint1Text": "Focused on bug fixing, workflow stability, and operational needs that are actually used every day.",
+            "#heroPoint2Title": "Strong technical and visual sense",
+            "#heroPoint2Text": "Comfortable working around systems while still paying attention to clean presentation and user comfort.",
+            "#heroCtaPrimary": "View Experience",
+            "#heroCtaSecondary": "View Contact",
+            "#introCopyText": "Focused on business systems, application support, and neat digital presentation.",
+            "#introBadge": "Currently Active",
+            "#introList1": "Handling bug fixing, internal application support, and data-related tasks connected to POS.",
+            "#introList2": "Monitoring Mitrasoft HRD and helping adjust features based on HR team needs.",
+            "#introList3": "Interested in clean, modern, and easy-to-understand web presentation.",
+            "#metric1": "Months as an IT Staff Programmer",
+            "#metric2": "Core systems handled",
+            "#metric3": "Focus: neat, professional, and realistic",
+            "#aboutEyebrow": "About",
+            "#aboutTitle": "A technical background with a structured and adaptable way of working.",
+            "#aboutLead": "I am more comfortable working on concrete things: understanding problems, reading patterns, fixing the weak parts, and making sure the result stays clean and easy to use. I apply that approach both to internal systems and to web presentation.",
+            "#aboutCard1Title": "Short Profile",
+            "#aboutCard1Body": "I currently work as an <span class=\"highlight\">IT Staff Programmer</span> at <span class=\"highlight\">PT Surya Pratama Keramindo</span>. My role focuses on system stability, bug fixing, POS data handling in PostgreSQL, as well as monitoring and feature adjustment in Mitrasoft HRD.",
+            "#aboutCard1List1": "Used to working with operational needs that must actually run, not just look good in a demo.",
+            "#aboutCard1List2": "Understand that a good system should be easy to use and easy to maintain.",
+            "#aboutCard1List3": "Keep a balance between technical function, clear structure, and user experience.",
+            "#aboutCard2Title": "Working Style",
+            "#aboutCard2Body": "I like results that feel clean and clear. To me, good presentation is not the loudest one, but the one that communicates information lightly, neatly, and with a modern feel.",
+            "#aboutCard2List1": "Prefer logical flow before adding extra visual elements.",
+            "#aboutCard2List2": "Lean toward mature, simple, and restrained design.",
+            "#aboutCard2List3": "Comfortable learning new things as long as they stay relevant and applicable.",
+            "#experienceEyebrow": "Experience",
+            "#experienceTitle": "Work experience that shaped precision, fast learning, and systematic thinking.",
+            "#experienceLead": "My current work environment demands quick response, clear technical understanding, and the ability to adapt systems to changing user needs.",
+            "#experienceCard1Title": "PT Surya Pratama Keramindo",
+            "#experience .about-grid > article:first-child > p": "<span class=\"highlight\">IT Staff Programmer</span> - 7 Months",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(1)": "Fixing bugs in systems used for day-to-day company operations.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(2)": "Handling employee receipt input and deletion based on <span class=\"highlight\">PostgreSQL</span> database needs within the POS application.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(3)": "Monitoring issues in <span class=\"highlight\">Mitrasoft HRD</span> so HR activities can continue without disruption.",
+            "#experience .about-grid > article:first-child .detail-list li:nth-child(4)": "Adding features requested by HR based on active operational needs.",
+            "#experience .about-grid > article:last-child h3": "Scope of Work",
+            "#experience .about-grid > article:last-child p": "In daily work, I do not only look at the technical side but also at actual usage. A good system should stay stable, easy to understand, and able to support the team's work without creating new confusion.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(1)": "Evaluate issues from data, workflow, and user needs.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(2)": "Keep feature changes relevant to the running work process.",
+            "#experience .about-grid > article:last-child .detail-list li:nth-child(3)": "Used to working neatly on small details that affect daily operations.",
+            "#results .section-head .eyebrow": "Strengths",
+            "#results .section-head h2": "The strengths that show up most clearly in how I work.",
+            "#results .section-head p": "This section sums up the work qualities I rely on most: structured thinking, enough attention to detail, flexibility, and a habit of making the final result feel clean and functional.",
+            "#results .result-card:nth-child(1) strong": "Neat",
+            "#results .result-card:nth-child(1) span": "Used to structuring things clearly",
+            "#results .result-card:nth-child(1) p": "Whether in systems or presentation, I work best with clean structure that is easy to follow.",
+            "#results .result-card:nth-child(2) strong": "Adaptive",
+            "#results .result-card:nth-child(2) span": "Quick to adjust to needs",
+            "#results .result-card:nth-child(2) p": "Comfortable handling changes, fixes, or added features as long as the direction is clear and executable.",
+            "#results .result-card:nth-child(3) strong": "Technical",
+            "#results .result-card:nth-child(3) span": "Comfortable with active systems",
+            "#results .result-card:nth-child(3) p": "Used to working on applications that people use directly, so my focus stays on real function rather than theory.",
+            "#results .result-card:nth-child(4) strong": "Creative",
+            "#results .result-card:nth-child(4) span": "Has visual sensitivity",
+            "#results .result-card:nth-child(4) p": "I like presentation that feels modern and a little distinctive, while still staying professional and controlled.",
+            "#projects .section-head .eyebrow": "Highlights",
+            "#projects .section-head h2": "Areas that best reflect my interests and development direction.",
+            "#projects .section-head p": "Beyond my main work in internal systems, I am also interested in how technology can be presented in a more modern, lighter, and easier-to-read way.",
+            "#projects .project-card:nth-child(1) h3": "Clean and Modern Web Profile",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(1)": "<strong>Focus:</strong> A one-page web presentation that feels neat, light, and comfortable to read.",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(2)": "<strong>Approach:</strong> Prioritizing information structure, typography, and calm visual rhythm.",
+            "#projects .project-card:nth-child(1) .case-list li:nth-child(3)": "<strong>Value:</strong> Suitable for a professional profile, personal website, or a modern online CV.",
+            "#projects .project-card:nth-child(2) h3": "The Blend of Systems and Presentation",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(1)": "<strong>Focus:</strong> Combining technical thinking with attention to interface and user experience.",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(2)": "<strong>Approach:</strong> Keeping the page light, clear, and still full of character.",
+            "#projects .project-card:nth-child(2) .case-list li:nth-child(3)": "<strong>Value:</strong> Shows that technology does not need to feel rigid in order to remain professional.",
+            "#projects .project-card:nth-child(3) h3": "Interest in Functional Detail",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(1)": "<strong>Focus:</strong> Small things like flow, information placement, and visual consistency.",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(2)": "<strong>Approach:</strong> Reducing unnecessary elements and strengthening what actually matters.",
+            "#projects .project-card:nth-child(3) .case-list li:nth-child(3)": "<strong>Value:</strong> Making the final result feel more mature, calm, and still distinctive.",
+            "#skills .section-head .eyebrow": "Skills",
+            "#skills .section-head h2": "Skills that are most relevant to my current work.",
+            "#skills .section-head p": "I prefer showing skills that I actually use and that connect directly to my current role, rather than building a long list with little focus.",
+            "#skills .card:nth-child(1) h3": "Business Systems",
+            "#skills .card:nth-child(2) h3": "Database",
+            "#skills .card:nth-child(3) h3": "Frontend",
+            "#skills .card:nth-child(4) h3": "Professional Presentation",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(1)": "Content structuring for CV and portfolio",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(2)": "Clean one-page presentation",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(3)": "Lightweight static website setup",
+            "#skills .card:nth-child(4) .skill-list li:nth-child(4)": "Simple and direct communication flow",
+            "#services .section-head .eyebrow": "Approach",
+            "#services .section-head h2": "How I look at technology, presentation, and the final result.",
+            "#services .section-head p": "I am interested in work that is not only technically complete, but also feels mature when used or viewed. Because of that, I try to keep a balance between function, neatness, and visual character.",
+            "#services .service-card:nth-child(1) .service-badge": "Thinking",
+            "#services .service-card:nth-child(1) h3": "Logical and Structured",
+            "#services .service-card:nth-child(1) p": "I prefer starting from the core problem, then arranging the solution in sequence so the result stays efficient and easy to understand.",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(1)": "Focus on what actually matters",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(2)": "Avoid elements that do not support the function",
+            "#services .service-card:nth-child(1) .service-list li:nth-child(3)": "Keep the flow clear from start to finish",
+            "#services .service-card:nth-child(2) .service-badge": "Execution",
+            "#services .service-card:nth-child(2) h3": "Practical and Adaptive",
+            "#services .service-card:nth-child(2) p": "I am used to working on systems that change along with user needs, so I am fairly flexible in adjusting the solution.",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(1)": "Comfortable with relevant change requests",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(2)": "Used to fixing things while keeping stability intact",
+            "#services .service-card:nth-child(2) .service-list li:nth-child(3)": "Quick to adjust to a new work context",
+            "#services .service-card:nth-child(3) .service-badge": "Visual Taste",
+            "#services .service-card:nth-child(3) h3": "Clean and Mature",
+            "#services .service-card:nth-child(3) p": "I like presentation that feels modern yet calm, with enough detail to look advanced without becoming excessive.",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(1)": "Clear and comfortable typography",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(2)": "Calm colors with controlled accents",
+            "#services .service-card:nth-child(3) .service-list li:nth-child(3)": "Neat and consistent visual composition",
+            "#services .service-card:nth-child(4) .service-badge": "Learning",
+            "#services .service-card:nth-child(4) h3": "Always Growing",
+            "#services .service-card:nth-child(4) p": "I am still building experience, but that also makes me open-minded, quick to learn, and willing to try fresher approaches.",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(1)": "Have an active technical foundation in current use",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(2)": "Keep curiosity alive for new things",
+            "#services .service-card:nth-child(4) .service-list li:nth-child(3)": "Combine work discipline with a creative touch",
+            "#contact .section-head .eyebrow": "Contact",
+            "#contact .section-head h2": "Contact and brief information.",
+            "#contact .section-head p": "This section makes it easy if you want to reach me, view my professional identity, or leave a short message in a more organized format.",
+            "#contact .contact-grid > article:first-child h3": "Contact",
+            "#contact .contact-line:nth-child(2) strong": "Name",
+            "#contact .contact-line:nth-child(3) strong": "Position",
+            "#contact .contact-line:nth-child(3) div span": "IT Staff Programmer",
+            "#contact .contact-actions .button-primary": "Contact via WhatsApp",
+            "#contact .contact-actions .button-secondary": "Back to Top",
+            "#contact .contact-grid > article:last-child h3": "Short Message",
+            "#contact .contact-grid > article:last-child > p": "This form does not use a backend. Its only purpose is to help structure a short message before opening WhatsApp.",
+            "label[for='name']": "Name",
+            "label[for='job']": "Profession",
+            "label[for='goal']": "Purpose",
+            "label[for='budget']": "Notes",
+            "label[for='message']": "Message",
+            "#contactForm button[type='submit']": "Prepare Message",
+            "#formNote": "The message will be formatted automatically and opened in WhatsApp.",
+            ".footer-shell p:first-child": "&copy; 2026 Adzi Purnomo. Built with HTML, CSS, and JavaScript without a framework.",
+            ".footer-shell p:last-child": "Ready for GitHub Pages or simple static hosting."
+          },
+          placeholders: {
+            "#name": "Your name",
+            "#job": "Example: Freelancer / Student",
+            "#goal": "Introduction / discussion / collaboration",
+            "#budget": "Optional",
+            "#message": "Write a short message you want to send."
+          },
+          form: {
+            required: "Name and message are required.",
+            prepared: "The WhatsApp draft is ready.",
+            whatsappIntro: "Hello Adzi, I viewed your online CV and wanted to connect.",
+            name: "Name",
+            job: "Profession",
+            goal: "Purpose",
+            budget: "Notes",
+            message: "Message"
+          },
+          aria: {
+            home: "Back to home",
+            themeDark: "Switch to light mode",
+            themeLight: "Switch to dark mode",
+            language: "Switch language"
+          }
+        }
+      };
 
-      counters.forEach(function(counter) {
-        observer.observe(counter);
-      });
-    }
-
-    function initGalleryFilters() {
-      var gallery = document.getElementById("appsSuiteGallery");
-      var countEl = document.getElementById("galleryCount");
-      var filters = document.querySelectorAll(".gallery-filter");
-      if (!gallery || !filters.length) {
-        return;
-      }
-
-      var items = Array.prototype.slice.call(gallery.querySelectorAll("img"));
-
-      function updateCount() {
-        if (!countEl) {
+      function setNodeContent(selector, value) {
+        const node = document.querySelector(selector);
+        if (!node) {
           return;
         }
-        var visible = items.filter(function(item) {
-          return item.style.display !== "none";
-        }).length;
-        countEl.textContent = String(visible);
+        node.innerHTML = value;
       }
 
-      function applyFilter(filter) {
-        items.forEach(function(item) {
-          var category = item.getAttribute("data-category") || "";
-          if (filter === "all" || filter === category) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
+      function applyLanguage(language) {
+        currentLanguage = language;
+        const translation = translations[language];
+        if (!translation) {
+          return;
+        }
+
+        document.documentElement.lang = language;
+        document.title = translation.title;
+
+        const metaDescription = document.getElementById("metaDescription");
+        if (metaDescription) {
+          metaDescription.setAttribute("content", translation.description);
+        }
+
+        Object.entries(translation.text).forEach(([selector, value]) => {
+          setNodeContent(selector, value);
+        });
+
+        Object.entries(translation.placeholders).forEach(([selector, value]) => {
+          const node = document.querySelector(selector);
+          if (node) {
+            node.setAttribute("placeholder", value);
           }
         });
-        updateCount();
+
+        const brand = document.querySelector(".brand");
+        if (brand) {
+          brand.setAttribute("aria-label", translation.aria.home);
+        }
+
+        langToggle.textContent = language === "id" ? "EN" : "ID";
+        langToggle.setAttribute("aria-label", translation.aria.language);
+
+        const theme = body.getAttribute("data-theme") || "light";
+        themeToggle.setAttribute("aria-label", theme === "dark" ? translation.aria.themeDark : translation.aria.themeLight);
+
+        try {
+          localStorage.setItem(languageStorageKey, language);
+        } catch (error) {}
       }
 
-      filters.forEach(function(button) {
-        button.addEventListener("click", function() {
-          filters.forEach(function(btn) { btn.classList.remove("active"); });
-          button.classList.add("active");
-          applyFilter(button.getAttribute("data-filter") || "all");
+      function setTheme(theme) {
+        body.setAttribute("data-theme", theme);
+        const translation = translations[currentLanguage] || translations.id;
+        themeToggle.setAttribute("aria-label", theme === "dark" ? translation.aria.themeDark : translation.aria.themeLight);
+        try {
+          localStorage.setItem(themeStorageKey, theme);
+        } catch (error) {}
+      }
+
+      function getInitialTheme() {
+        try {
+          const savedTheme = localStorage.getItem(themeStorageKey);
+          if (savedTheme === "dark" || savedTheme === "light") {
+            return savedTheme;
+          }
+        } catch (error) {}
+        return "light";
+      }
+
+      function getInitialLanguage() {
+        try {
+          const savedLanguage = localStorage.getItem(languageStorageKey);
+          if (savedLanguage === "id" || savedLanguage === "en") {
+            return savedLanguage;
+          }
+        } catch (error) {}
+        return "id";
+      }
+
+      function activateLink(id) {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
         });
+      }
+
+      function getCurrentSectionId() {
+        const offset = 120;
+        let currentId = sections[0] ? sections[0].id : "";
+
+        sections.forEach((section) => {
+          if (window.scrollY >= section.offsetTop - offset) {
+            currentId = section.id;
+          }
+        });
+
+        return currentId;
+      }
+
+      function syncActiveLinkFromScroll() {
+        const currentId = getCurrentSectionId();
+        if (currentId) {
+          activateLink(currentId);
+        }
+      }
+
+      function scrollToSection(targetId, updateHash) {
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection) {
+          return;
+        }
+
+        const header = document.querySelector(".site-header");
+        const headerHeight = header ? header.offsetHeight : 0;
+        const preferredTarget = targetSection.querySelector(".section-head") || targetSection;
+        const targetTop = preferredTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
+
+        window.scrollTo({
+          top: Math.max(0, targetTop),
+          behavior: "smooth"
+        });
+
+        if (updateHash) {
+          history.pushState(null, "", "#" + targetId);
+        }
+      }
+
+      function initNavLinks() {
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = link.getAttribute("href").replace("#", "");
+            activateLink(targetId);
+            scrollToSection(targetId, true);
+          });
+        });
+      }
+
+      function initReveal() {
+        if (!("IntersectionObserver" in window)) {
+          revealItems.forEach((item) => item.classList.add("in-view"));
+          syncActiveLinkFromScroll();
+          return;
+        }
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visible[0]) {
+            activateLink(visible[0].target.id);
+          }
+        }, {
+          rootMargin: "-35% 0px -50% 0px",
+          threshold: [0.2, 0.35, 0.55]
+        });
+
+        sections.forEach((section) => sectionObserver.observe(section));
+      }
+
+      function initForm() {
+        if (!contactForm) {
+          return;
+        }
+
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = {
+            name: nameField.value.trim(),
+            job: jobField.value.trim(),
+            goal: goalField.value.trim(),
+            budget: budgetField.value.trim(),
+            message: messageField.value.trim()
+          };
+
+          if (!formData.name || !formData.message) {
+            formNote.textContent = translations[currentLanguage].form.required;
+            return;
+          }
+
+          const whatsappMessage = [
+            translations[currentLanguage].form.whatsappIntro,
+            "",
+            translations[currentLanguage].form.name + ": " + formData.name,
+            translations[currentLanguage].form.job + ": " + (formData.job || "-"),
+            translations[currentLanguage].form.goal + ": " + (formData.goal || "-"),
+            translations[currentLanguage].form.budget + ": " + (formData.budget || "-"),
+            "",
+            translations[currentLanguage].form.message + ":",
+            formData.message
+          ].join("\n");
+
+          formNote.textContent = translations[currentLanguage].form.prepared;
+          window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(whatsappMessage), "_blank", "noopener");
+        });
+      }
+
+      langToggle.addEventListener("click", function () {
+        const nextLanguage = currentLanguage === "id" ? "en" : "id";
+        applyLanguage(nextLanguage);
       });
 
-      applyFilter("all");
-    }
-
-    function openModal(id) {
-      var modal = document.getElementById(id);
-      if (modal) {
-        modal.style.display = "flex";
-      }
-    }
-
-    function closeModal(id) {
-      var modal = document.getElementById(id);
-      if (modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    function zoomImage(src) {
-      var zoomModal = document.getElementById("zoomModal");
-      var zoomedImage = document.getElementById("zoomedImage");
-      var zoomedVideo = document.getElementById("zoomedVideo");
-      if (!zoomModal || !zoomedImage || !zoomedVideo) {
-        return;
-      }
-      zoomedVideo.style.display = "none";
-      zoomedImage.style.display = "block";
-      zoomedImage.src = src;
-      zoomModal.style.display = "flex";
-    }
-
-    function zoomVideo(youtubeUrl) {
-      var zoomModal = document.getElementById("zoomModal");
-      var zoomedImage = document.getElementById("zoomedImage");
-      var zoomedVideo = document.getElementById("zoomedVideo");
-      if (!zoomModal || !zoomedImage || !zoomedVideo) {
-        return;
-      }
-      var embedUrl = youtubeUrl.replace("youtu.be/", "www.youtube.com/embed/").split("?")[0];
-      zoomedImage.style.display = "none";
-      zoomedVideo.style.display = "block";
-      zoomedVideo.src = embedUrl;
-      zoomModal.style.display = "flex";
-    }
-
-    function closeZoom() {
-      var zoomModal = document.getElementById("zoomModal");
-      var zoomedImage = document.getElementById("zoomedImage");
-      var zoomedVideo = document.getElementById("zoomedVideo");
-      if (zoomModal) {
-        zoomModal.style.display = "none";
-      }
-      if (zoomedImage) {
-        zoomedImage.src = "";
-      }
-      if (zoomedVideo) {
-        zoomedVideo.src = "";
-      }
-    }
-
-    AOS.init({
-      duration: 900,
-      once: true
-    });
-
-    var lastScrollTop = 0;
-    var header = document.querySelector("header");
-    var langToggle = document.getElementById("langToggle");
-    var themeToggle = document.getElementById("themeToggle");
-    var savedLang = "id";
-
-    try {
-      savedLang = localStorage.getItem("cvLang") || "id";
-    } catch (e) {}
-    applyLanguage(savedLang);
-
-    function applyTheme(theme) {
-      document.body.setAttribute("data-theme", theme);
-      if (themeToggle) {
-        themeToggle.textContent = theme === "dark" ? "LIGHT" : "DARK";
-      }
-      try {
-        localStorage.setItem("cvTheme", theme);
-      } catch (e) {}
-    }
-
-    var savedTheme = "dark";
-    try {
-      savedTheme = localStorage.getItem("cvTheme") || "dark";
-    } catch (e) {}
-    applyTheme(savedTheme);
-
-    if (langToggle) {
-      langToggle.addEventListener("click", function() {
-        var current = document.documentElement.getAttribute("lang") || "id";
-        var next = current === "id" ? "en" : "id";
-        applyLanguage(next);
+      themeToggle.addEventListener("click", function () {
+        const nextTheme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
       });
-    }
 
-    if (themeToggle) {
-      themeToggle.addEventListener("click", function() {
-        var currentTheme = document.body.getAttribute("data-theme") || "dark";
-        var nextTheme = currentTheme === "dark" ? "light" : "dark";
-        applyTheme(nextTheme);
+      applyLanguage(getInitialLanguage());
+      setTheme(getInitialTheme());
+      initNavLinks();
+      initReveal();
+      initForm();
+      syncActiveLinkFromScroll();
+      window.addEventListener("scroll", syncActiveLinkFromScroll, { passive: true });
+      window.addEventListener("hashchange", function () {
+        const targetId = window.location.hash.replace("#", "");
+        if (targetId) {
+          activateLink(targetId);
+          scrollToSection(targetId, false);
+        } else {
+          syncActiveLinkFromScroll();
+        }
       });
-    }
-
-    initCounters();
-    initGalleryFilters();
-
-    window.addEventListener("scroll", function() {
-      if (!header) {
-        return;
-      }
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var headerHeight = header.offsetHeight || 80;
-      if (scrollTop > lastScrollTop) {
-        header.style.top = "-" + headerHeight + "px";
-      } else {
-        header.style.top = "0";
-      }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
+    })();
   </script>
 </body>
 </html>
